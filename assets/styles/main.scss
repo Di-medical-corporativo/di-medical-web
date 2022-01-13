@@ -1,0 +1,39 @@
+
+@import "header";
+@import "home";
+@import "components";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('~assets/fonts/Nunito/static/Nunito-Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: "Nunito";
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+
+
+.nuxt-link-exact-active {
+    border-bottom: 3px solid #fff;
+}

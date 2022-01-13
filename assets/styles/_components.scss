@@ -1,0 +1,280 @@
+.heroimage {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    z-index: -1;
+
+    background: {
+        position: 30% 10%;
+        size: cover;
+        repeat: no-repeat;
+    }
+
+    ;
+
+    .heroimage__svg {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    @include small_device-up {
+        height: 500px;
+
+        background: {
+            position: bottom;
+            size: cover;
+            repeat: no-repeat;
+        }
+
+        ;
+    }
+
+    @include medium_device-up {
+        height: 550px;
+
+        background: {
+            position: bottom;
+            size: cover;
+            repeat: no-repeat;
+        }
+    }
+
+}
+
+.hexagons {
+    width: 100%;
+    overflow: hidden;
+    // @include margin_top_components;
+    background-color: #F8F8F8;
+    transition: .2s;
+    position: relative;
+    @include flex(center, space-evenly, column);
+
+    .hexagons__title {
+        @include h1;
+    }
+
+    .hexagons__up,
+    .hexagons__down {
+        margin-top: 10px;
+        width: 100%;
+        @include flex(center, space-around, column);
+
+        @include small_device-up {
+            @include flex(center, center, row);        
+        }
+        transition: .4s;
+        z-index: 3;
+    }
+
+    .hexagons__down {
+        @include small_device-up {
+            margin-top: -60px;       
+        }
+
+        @include small_device-down {
+            .hexagon__wrap:nth-child(1) {
+                align-self: flex-start;
+            }
+
+            .hexagon__wrap:nth-child(2) {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    .hexagons__up {
+        @include small_device-down {
+            .hexagon__wrap:nth-child(1) {
+                align-self: flex-end;
+            }
+
+            .hexagon__wrap:nth-child(2) {
+                align-self: flex-start;
+            }
+
+            .hexagon__wrap:nth-child(3) {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    .hexagon__wrap {
+        filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+        transition: .2s;
+    }
+
+    .hexagon {
+        $s: 170px;
+        $m: 6px;
+        width: $s;
+        margin: $m;
+        border-radius: 10px;
+        height: calc($s * 1.1547);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: initial;
+        position: relative;
+        clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+        background-color: $bg-dm-corporativo-dark;
+        @include medium_device-up {
+            $s: 195px;
+            width: $s;
+            height: calc($s * 1.1547);
+        }
+        &:before{ 
+            content: "";
+            $s: 160px;
+            $m: 6px;
+            width: $s;
+            margin: $m;
+            border-radius: 5px;
+            height: calc($s * 1.1547);
+            display: inline-block;
+            font-size: initial;
+            clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+            background-color: $bg-dm-corporativo-dark;
+            background: {
+                image: url('~/static/images/hexagonsBackground.jpg');
+                position: bottom left;
+                size: cover;
+            }
+
+            @include medium_device-up {
+                $s: 185px;
+                width: $s;
+                height: calc($s * 1.1547);
+            }
+        }
+
+        .hexagon__img {
+            width: 120px;
+            position: absolute;
+
+            @include medium_device-up {
+                width: 150px;
+            }
+        }
+    }
+
+
+    svg {
+        position: absolute;
+        bottom: 0px;
+    }
+
+}
+
+.products {
+    width: 100%;
+    position: relative;
+    @include flex(center, space-evenly, column);
+    @include margin_top_components;
+    @include medium_device-up {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .products__button {
+        width: 90%;
+        height: 40px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        background-color: $bg-dm-corporativo-light;
+        margin-bottom: 20px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        @include small_device-up {
+            width: 250px;
+            height: 50px;
+        }
+        z-index: 2;
+    }
+
+    .products__title {
+        @include h1;
+        z-index: 2;
+    }
+    
+    .products__list {
+        margin-bottom: 20px;
+        @include flex(center, space-between, column);
+        @include small_device-up { 
+            width: 100%;
+            @include flex(center, space-around, row);
+            flex-wrap: wrap;
+        }
+        z-index: 2;
+    }
+
+    .product {
+        width: 280px;
+        height: 230px;
+        margin-top: 120px;
+        position: relative;
+        background-color: #FAFAFA;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background: {
+            image: url('~/static/images/greyHexHor.jpg');
+            position: center;
+            size: cover;
+        }
+        border-radius: 5px;
+        .product__image__wrap {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background-color: $bg-dm-corporativo-dark;
+            position: absolute;
+            top: -100px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            @include flex(center, center, column);
+            .product__image{ 
+                width: 95%;
+                height: 95%;
+                border-radius: 50%;
+                background-color: #D1B600;             
+                @include flex(center, center, column);
+                .image {
+                    width: 95%;
+                    height: 95%;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .product__title {
+            width: 100%;
+            @include flex(center, space-around, column);
+            position: absolute;
+            bottom: 5px;
+
+            h3 {
+                color: $bg-dm-corporativo-light;
+                font-weight: 600;
+            }
+
+            .product__info {
+                width: 100px;
+                height: 30px;
+                color: #fff;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                background-color: $bg-dm-corporativo-dark;
+            }
+        }
+
+    }
+
+    svg {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+}
