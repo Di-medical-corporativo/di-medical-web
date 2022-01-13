@@ -2,6 +2,7 @@
 @import "header";
 @import "home";
 @import "components";
+@import "footer";
 * {
     margin: 0;
     padding: 0;
@@ -36,4 +37,8 @@ body {
 
 .nuxt-link-exact-active {
     border-bottom: 3px solid #fff;
+}
+
+.main_layout{
+    position: relative;
 }
