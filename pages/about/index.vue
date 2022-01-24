@@ -1,11 +1,17 @@
 <template>
-  <h1>About</h1>
+  <div class="about">
+    <HeroImageComponent image="about" title="Conocenos"/>
+  </div>
 </template>
 
 <script>
-export default {
-  layout: 'main'
-}
+import { defineAsyncComponent, defineComponent } from '@nuxtjs/composition-api'
+export default defineComponent({
+  layout: 'main',
+  components: {
+    HeroImageComponent: defineAsyncComponent(() => import('../../components/heroImage.vue'))
+  }
+})
 </script>
 
 <style>

@@ -35,12 +35,26 @@
       </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,256L120,240C240,224,480,192,720,181.3C960,171,1200,181,1320,186.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+    <hexagonDecorationComponent class="decoration--3"/>
   </div>
 </template>
 
 <script>
-export default {};
+import { defineComponent, defineAsyncComponent } from "@nuxtjs/composition-api";
+
+export default defineComponent({
+  components: {
+    hexagonDecorationComponent: defineAsyncComponent(() => import('../hexagonDecoration.vue'))
+  }
+})
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .decoration--3 {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    z-index: 2;
+     transform: rotate(230deg);
+  }
 </style>

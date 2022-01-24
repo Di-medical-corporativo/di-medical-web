@@ -4,7 +4,8 @@
         <FeaturesComponent/>
         <HexagonBrandsComponent/>
         <ProductsComponent/>
-        <YoutubeVideosComponent/>
+        <CounterComponent/>
+        <ContactHeroComponent/>
     </div>
 </template>
 
@@ -28,7 +29,8 @@ export default defineComponent({
         HexagonBrandsComponent: defineAsyncComponent(() => import('../components/home/hexagonBrand.vue')),
         ProductsComponent: defineAsyncComponent(() => import('../components/products.vue')),
         FeaturesComponent: defineAsyncComponent(() => import('../components/home/features.vue')),
-        YoutubeVideosComponent: defineAsyncComponent(() => import('../components/home/youtubeVideos.vue'))
+        CounterComponent: defineAsyncComponent(() => import('../components/counter.vue')),
+        ContactHeroComponent: defineComponent(() => import('../components/home/contactHero.vue'))
     }
 })
 </script>

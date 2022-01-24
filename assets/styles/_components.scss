@@ -1,16 +1,32 @@
 .heroimage {
     width: 100%;
-    height: 260px;
+    height: 400px;
     position: relative;
     z-index: -1;
-
+    @include flex(center, center, column);
     background: {
         position: 30% 10%;
         size: cover;
         repeat: no-repeat;
     }
 
-    ;
+    .heroimage__filter {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.562);
+    }
+
+
+    .heroimage__title {
+        z-index: 4;
+        color: #fff;
+        font-size: 50px;
+        @include medium_device-up {
+            font-size: 70px;
+        }
+        text-align: center;
+    }
 
     .heroimage__svg {
         width: 100%;
@@ -170,6 +186,7 @@
 .products {
     width: 100%;
     position: relative;
+    overflow: hidden;
     @include flex(center, space-evenly, column);
     @include margin_top_components;
     @include medium_device-up {
@@ -277,4 +294,53 @@
         bottom: 0;
         z-index: 1;
     }
+}
+
+.counter {
+    width: 100%;
+    background-color:#FAFAFA;
+    @include flex(center, space-around, column);
+    @include small_device-up {
+        @include flex(center, space-around, row);
+        
+    }
+    .counter__value {
+        width: 100%;
+        height: 280px;
+        @include flex(center, center, column);
+        transition: .2s;
+        .value {
+            font-size: 80px;
+            @include medium_device-up{
+                font-size: 85px;
+            }
+            color: $bg-dm-corporativo-light;
+            transition: .5s;
+        }
+
+        .title {
+            font-size: 20px;
+            @include medium_device-up {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.hexagon__decoration {
+    $s: 120px;
+    $m: 1px;
+    width: $s;
+    margin: $m;
+    border-radius: 10px;
+    height: calc($s * 1.1547);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: initial;
+    position: absolute;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    background-color: $bg-dm-corporativo-light;
+
+    
 }

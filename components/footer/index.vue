@@ -32,8 +32,9 @@
             <b-icon class="media__icon" icon="youtube"></b-icon>
           </a>
         </div>
-        <p>atencionalcliente@dimedicalcorporativo.mx</p>
-        <router-link to="">Aviso de privacidad</router-link>
+        <p class="mail">atencionalcliente@dimedicalcorporativo.mx</p>
+        <router-link class="link" to="">Aviso de privacidad</router-link>
+        <p class="copy">&copy; 2021 Di-medical. Todos los derechos reservados.</p>
       </div>
     </div>
   </div>
