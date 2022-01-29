@@ -8,16 +8,26 @@
       <p class="desc"> Contacta con uno de nuestros asesores, resolvera todas tus dudas.</p>
       <button class="contact__hero__button">Contacto</button>
     </div>
-    
+    <hexagonDecorationComponent class="decoration--6"/>
   </div>
 </template>
 
 <script>
-export default {
+import { defineAsyncComponent, defineComponent } from "@nuxtjs/composition-api";
 
-}
+export default defineComponent({
+  components: {
+    hexagonDecorationComponent: defineAsyncComponent(() => import('../hexagonDecoration.vue'))
+  }
+})
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .decoration--6 {
+    position: absolute;
+    right: -40px;
+    bottom: 0px;
+    z-index: -1;
+     transform: rotate(45deg);
+  }
 </style>

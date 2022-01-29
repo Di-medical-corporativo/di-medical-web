@@ -1,0 +1,312 @@
+.about {
+    width: 100%;
+    height: 100%;
+
+    .who {
+        @include flex(center, space-around, row);
+        flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+        .who__team {
+            width: 100%;
+
+            background: {
+                image: url('~/static/images/svgAbout.png');
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            }
+
+            @include flex(center, center, row);
+
+            @include small_device-up {
+                width: 50%;
+            }
+
+            height: 500px;
+
+            img {
+                width: 80%;
+
+                @include medium_device-up {
+                    width: 450px;
+                }
+            }
+        }
+
+        .who__statement {
+            width: 100%;
+
+            @include small_device-up {
+                width: 50%;
+                text-align: left;
+            }
+
+            @include flex(center, center, column);
+            text-align: center;
+
+            .who__statement__title {
+                @include h1;
+            }
+
+            .statement {
+                font-size: 18px;
+                padding: 5px;
+
+                @include small_device-up {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        svg {
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    .principles {
+        width: 100%;
+        background-color: $even_section_color;
+        @include flex(center, space-evenly, column);
+        position: relative;
+        overflow: hidden;
+        .principle {
+            width: 85%;
+            z-index: 2;
+            margin-top: 30px;
+            @include flex(center, space-evenly, column);
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+            background: {
+                image: url('~/static/images/goldenHexVer.jpg');
+                position: bottom left;
+                size: cover;
+            }
+
+            background-color: $bg-dm-corporativo-light;
+
+            @include medium_device-up {
+                width: 400px;
+                height: 300px;
+            }
+
+            .principle__title {
+                @include h1;
+                color: #fff;
+            }
+
+            .principle__desc {
+                width: 90%;
+                font-size: 18px;
+                text-align: justify;
+                color: #fff;
+                @include flex(center, center, column);
+
+                li {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        @include medium_device-up {
+            .principle:nth-child(1) {
+                align-self: flex-start;
+                margin-left: 20px;
+            }
+
+            .principle:nth-child(3) {
+                align-self: flex-end;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+
+    }
+
+    .timeline {
+
+        $bg-body: #f9f9f9;
+        position: relative;
+        .timeline__svg {
+            position: absolute;
+            top: -10px;
+            z-index: -1;
+            @include medium_device_down {
+                top: -50px;
+            }
+        }
+        $red: #c28400;
+        $blue: #2b2e48;
+        $primary-color: $red;
+        $secondary-color: $blue;
+        $base-font: helvetica, arial, tahoma, verdana;
+        $base-font-title: "Dosis", arial, tahoma, verdana;
+
+        $base-font-color: #726f77;
+
+        // Timeline
+        $timeline-color: $primary-color;
+
+        %clearfix {
+
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                clear: both;
+            }
+        }
+
+        @mixin prefix($prop, $val) {
+
+            @each $prefix in '-webkit-',
+            '-moz-',
+            '-ms-',
+            '' {
+                #{$prefix}#{$prop}: $val;
+            }
+        }
+
+        width: 100%;
+
+        .timeline__title{ 
+            @include h1;
+            margin-top: 10px;
+
+            @include medium_device_down {
+                margin-top: 30px;
+            }
+        }
+
+        .timeline__content {
+            width: 100%;
+            margin: 40px auto;
+   
+            position: relative;
+            padding: 0 10px;
+            @include prefix(transition, all .4s ease);
+
+            &:before {
+                content: "";
+                width: 3px;
+                height: 100%;
+                background: $timeline-color;
+                left: 50%;
+                top: 0;
+                position: absolute;
+            }
+
+            &:after {
+                content: "";
+                clear: both;
+                display: table;
+                width: 100%;
+            }
+
+            .timeline-item {
+                margin-bottom: 50px;
+                position: relative;
+                @extend %clearfix;
+
+                .timeline-icon {
+                    background: $timeline-color;
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    overflow: hidden;
+                    margin-left: -23px;
+                    @include prefix(border-radius, 50%);
+
+                    svg {
+                        position: relative;
+                        top: 14px;
+                        left: 14px;
+                    }
+                }
+
+                .timeline-content {
+                    width: 45%;
+                    background: #fff;
+                    padding: 20px;
+                    @include prefix(box-shadow, 0 3px 0 rgba(0, 0, 0, 0.1));
+                    @include prefix(border-radius, 5px);
+                    @include prefix(transition, all .3s ease);
+
+                    h2 {
+                        padding: 15px;
+                        background: $timeline-color;
+                        color: #fff;
+                        margin: -20px -20px 0 -20px;
+                        font-weight: 300;
+                        @include prefix(border-radius, 3px 3px 0 0);
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 45%;
+                        top: 20px;
+                        width: 0;
+                        height: 0;
+                        border-top: 7px solid transparent;
+                        border-bottom: 7px solid transparent;
+                        border-left: 7px solid $timeline-color;
+                    }
+
+                    &.right {
+                        float: right;
+
+                        &:before {
+                            content: '';
+                            right: 45%;
+                            left: inherit;
+                            border-left: 0;
+                            border-right: 7px solid $timeline-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline__content {
+                margin: 30px;
+                padding: 0px;
+                width: 90%;
+
+                &:before {
+                    left: 0;
+                }
+
+                .timeline-item {
+                    .timeline-content {
+                        width: 90%;
+                        float: right;
+
+                        &:before,
+                        &.right:before {
+                            left: 10%;
+                            margin-left: -6px;
+                            border-left: 0;
+                            border-right: 7px solid $timeline-color;
+                        }
+                    }
+
+                    .timeline-icon {
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

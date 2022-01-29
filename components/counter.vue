@@ -23,18 +23,6 @@ export default defineComponent({
     const first_value = ref(0);
     const second_value = ref(0);
     const third_value = ref(0);
-
-    const appeared = () => {
-      if(process.client){
-        const rect = document.getElementById('counter').getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-      }
-    }
     const counter = () => {
       setInterval(() => {
         if(first_value.value === 100){
@@ -59,32 +47,14 @@ export default defineComponent({
 
       
     }  
-    const checkIfMobile = () => {
-      if(window.matchMedia("(max-width: 750px)").matches){
-        return true
-      }
-      return false;
-    }
 
-    if (process.client) {
-      if(!checkIfMobile()) {
-        document.addEventListener('scroll', () => {
-          if(appeared()) {
-            counter()
-          }
-        })
-      } else {
-        counter()
-      }
-      
-    }
+    counter()
 
     return {
       counter,
       first_value,
       second_value,
       third_value,
-      appeared
     }
   }
 })

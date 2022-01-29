@@ -10,8 +10,9 @@
 </template>
 
 <script>
-import { defineComponent, defineAsyncComponent } from '@nuxtjs/composition-api'
+import { defineComponent, defineAsyncComponent, useMeta } from '@nuxtjs/composition-api'
 export default defineComponent({
+    head: {},
     layout: 'main',
     // setup(_ ,{ root, nuxt }) {
     //     root.$nextTick(() => {
@@ -21,7 +22,7 @@ export default defineComponent({
     // },
 
     setup(props) {
-
+        useMeta({ title: 'Inicio' })
     },
 
     components: {
