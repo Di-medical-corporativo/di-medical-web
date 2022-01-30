@@ -4,6 +4,7 @@
     <WhoWeAreComponent/>
     <PrinciplesComponent/>
     <TimeLineComponent/>
+    <SpecialtyComponent/>
   </div>
 </template>
 
@@ -15,7 +16,8 @@ export default defineComponent({
     HeroImageComponent: defineAsyncComponent(() => import('../../components/heroImage.vue')),
     WhoWeAreComponent: defineAsyncComponent(() => import('../../components/about/whoWeAre.vue')),
     PrinciplesComponent:defineAsyncComponent(() => import('../../components/about/misionVision.vue')), 
-    TimeLineComponent: defineAsyncComponent(() => import('../../components/about/timeLine.vue'))    
+    TimeLineComponent: defineAsyncComponent(() => import('../../components/about/timeLine.vue')),
+    SpecialtyComponent: defineAsyncComponent(() => import('../../components/about/specialty.vue'))  
   }
 })
 </script>
