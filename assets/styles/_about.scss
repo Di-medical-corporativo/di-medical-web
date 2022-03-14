@@ -322,9 +322,15 @@
 
     .specialties {
         width: 100%;
+        @include medium_device-up {
+            height: 500px;
+        }
+        position: relative;
         @include flex(center, space-around, column);
+        background-color: $even_section_color;
         .specialties__title{
             @include h1;
+            z-index: 2;
         }
         .specialties__content {
             width: 100%;
@@ -387,5 +393,11 @@
             }
         }
         
+
+        svg  {
+            position: absolute;
+            top: 0;
+            z-index: 0;
+        }
     }
 }

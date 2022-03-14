@@ -1,0 +1,26 @@
+.error {
+    width: 100%;
+    height: 100vh;
+    @include flex(center, center, column);
+    background: {
+        image: url('~/static/images/errorBg.svg');
+        position: center;
+        size:cover;
+    };
+
+    .error__code {
+        font-size: 100px;
+        color: #fff;
+    }
+
+    .error__message {
+        font-size: 40px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .error__back {
+        color: #fff;
+        text-decoration: underline;
+    }
+}

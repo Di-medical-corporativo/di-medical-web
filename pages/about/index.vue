@@ -5,6 +5,7 @@
     <PrinciplesComponent/>
     <TimeLineComponent/>
     <SpecialtyComponent/>
+    <ProductsComponent position="top"/>
   </div>
 </template>
 
@@ -17,7 +18,8 @@ export default defineComponent({
     WhoWeAreComponent: defineAsyncComponent(() => import('../../components/about/whoWeAre.vue')),
     PrinciplesComponent:defineAsyncComponent(() => import('../../components/about/misionVision.vue')), 
     TimeLineComponent: defineAsyncComponent(() => import('../../components/about/timeLine.vue')),
-    SpecialtyComponent: defineAsyncComponent(() => import('../../components/about/specialty.vue'))  
+    SpecialtyComponent: defineAsyncComponent(() => import('../../components/about/specialty.vue')),
+    ProductsComponent: defineAsyncComponent(() => import('../../components/products.vue')),
   }
 })
 </script>

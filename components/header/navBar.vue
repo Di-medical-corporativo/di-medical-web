@@ -2,19 +2,16 @@
   <div class="navbar" id="nav" :style="{ display: open? 'flex' : 'none' }">
     <ul class="navbar__list">
         <li class="navbar__list__item">
-            <nuxt-link to="/" data-text="inicio">Inicio</nuxt-link>
+            <nuxt-link :to="{ name: 'index' }" data-text="inicio">Inicio</nuxt-link>
         </li>
         <li class="navbar__list__item">
-            <nuxt-link to="/about" data-text="Conocenos">Conocenos</nuxt-link>
+            <nuxt-link :to="{ name: 'about' }" data-text="Conocenos">Conocenos</nuxt-link>
         </li>
         <li class="navbar__list__item">
-            <nuxt-link to="/products" data-text="Productos" >Productos</nuxt-link>
+            <nuxt-link :to="{ name: 'products' }" data-text="Productos" >Productos</nuxt-link>
         </li>
         <li class="navbar__list__item">
-            <nuxt-link to="/" data-text="Blog">Blog</nuxt-link>
-        </li>
-        <li class="navbar__list__item">
-            <nuxt-link to="/" data-text="Contacto">Contacto</nuxt-link>
+            <nuxt-link :to="{ name: 'contact' }" data-text="Contacto">Contacto</nuxt-link>
         </li>
     </ul>
     <b-icon 

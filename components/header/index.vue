@@ -3,18 +3,21 @@
     <nav class="header__nav">
         <ul class="header__list">
             <li class="header__list__item">
-                <nuxt-link to="/">Inicio</nuxt-link>
+                <nuxt-link :to="{ name: 'index' }">Inicio</nuxt-link>
             </li>
             <li class="header__list__item">
-                <nuxt-link to="/about">Conocenos</nuxt-link>
+                <nuxt-link :to="{ name: 'about' }">Conocenos</nuxt-link>
             </li>
-            <li class="header__list__item">Productos</li>
             <li class="header__list__item icon">
                 <img src="../../static/images/dimedicalLogo.png" class="header__icon" alt="Dimedical corporativo icon">
             </li>
-            <li class="header__list__item">Blog</li>
-            <li class="header__list__item">Contacto</li>
-            <li class="header__list__item">Idioma</li>
+            <li class="header__list__item">
+                <nuxt-link :to="{ name: 'products' }">Productos</nuxt-link>
+            </li>
+
+            <li class="header__list__item">
+				<nuxt-link :to="{ name: 'contact' }">Contacto</nuxt-link>
+			</li>
         </ul>
     </nav>
     <nav class="header__nav-mobile">
