@@ -164,4 +164,38 @@
 
 		
 	}
+
+    .product__detail__desc {
+        width: 95%;
+        height: 100%;
+        overflow-y: scroll;
+        @include flex(center, space-between, column);
+
+        @include medium_device_down {
+            margin-top: 20px;
+        }
+
+        .product__detail__desc__title {
+            @include h1;
+            text-align: left;
+            color: #000;
+        }
+
+        .product__detail__desc__details{
+            @include flex(flex-start, flex-start, column);
+            @include small_device-up {
+                @include flex(center, flex-start, row);;
+            }
+            
+            width: 100%;
+            
+            margin-top: 10px;
+            .code {
+                color: #a0a3ad;
+                @include small_device-up {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
 }
