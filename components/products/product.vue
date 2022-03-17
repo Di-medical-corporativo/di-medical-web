@@ -1,7 +1,7 @@
 <template>
   <b-card
       title="Este es el nombre del producto"
-      img-src="https://picsum.photos/600/300/?image=25"
+      img-src="https://cdn.fstoppers.com/styles/full/s3/media/2015/12/07/white_background_bag_after.jpg"
       img-alt="Image"
       img-top
       tag="article"
