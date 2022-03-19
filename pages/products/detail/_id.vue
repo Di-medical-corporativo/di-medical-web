@@ -1,10 +1,12 @@
 <template>
   <div class="product__detail">
-		<div class="product__detail__section">
-      <ProductPhotoComponent/>
-    </div>
+		<div class="product__detail__main">
+      <div class="product__detail__section">
+        <ProductPhotoComponent/>
+      </div>
     <div class="product__detail__section">
       <ProductDescComponent/>
+    </div>
     </div>
   </div>
 </template>
