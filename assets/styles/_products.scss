@@ -94,13 +94,12 @@
 
             .card {
                 width: 100%;
-                box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 
                 @include small_device-up {
                     max-width: 20rem;
 
                     &:hover {
-                        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
                         transition: .2s;
                         z-index: 2;
                     }
@@ -134,249 +133,274 @@
     @include flex(flex-start, space-around, column);
 
     @include medium_device-up {
-        @include flex(center, space-around, row);
-
         .product__detail__section {
             width: 50%;
             @include flex(center, center, row);
         }
     }
-    
+
     .product__detail__main {
         @include flex(center, space-between, column);
 
         @include medium_device-up {
             flex-direction: row;
         }
-    }
 
-    .product__detail__section {
-        width: 100%;
-        @include flex(center, center, row);
-    }
-
-    .product__detail__photo {
-        width: 100%;
-        @include flex(center, center, column);
-
-        @include medium_device-up {
-            height: 600px;
+        .product__detail__section {
+            width: 100%;
+            @include flex(center, center, row);
         }
 
-        @include large_device-up {
-            height: 680px;
-        }
-
-        .product__detail__photo__main {
-            width: 95%;
-            height: 450px;
-            transition: .2s;
-            position: relative;
-            background: {  
-                image: url('https://cdn.fstoppers.com/styles/full/s3/media/2015/12/07/white_background_bag_after.jpg');
-                size: 85%;
-                position: center;
-                repeat: no-repeat;
-            };
+        .product__detail__photo {
+            width: 100%;
+            @include flex(center, center, column);
 
             @include medium_device-up {
-                height: 480px;
+                height: 600px;
+            }
+
+            @include large_device-up {
+                height: 680px;
+            }
+
+            .product__detail__photo__main {
+                width: 95%;
+                height: 450px;
+                transition: .2s;
+                position: relative;
+
                 background: {
                     image: url('https://cdn.fstoppers.com/styles/full/s3/media/2015/12/07/white_background_bag_after.jpg');
-                    size: contain;
+                    size: 85%;
                     position: center;
                     repeat: no-repeat;
-                };
-            }
-
-            .prodoct__detail__full_size {
-                position: absolute;
-                right: 0;
-                top:0;
-                width: 50px;
-                height: 50px;
-                transition: .2s;
-                cursor: pointer;
-                background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.5);
-                @include flex(center, center, row);
-                color: #ffffff;
-                .fullscreen__icon{
-                    width: 40px;
-                    height: 30px;
                 }
 
-                &:hover {
-                    background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.8);
+                ;
+
+                @include medium_device-up {
+                    height: 480px;
+
+                    background: {
+                        image: url('https://cdn.fstoppers.com/styles/full/s3/media/2015/12/07/white_background_bag_after.jpg');
+                        size: contain;
+                        position: center;
+                        repeat: no-repeat;
+                    }
+
+                    ;
+                }
+
+                .prodoct__detail__full_size {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 50px;
+                    height: 50px;
+                    transition: .2s;
+                    cursor: pointer;
+                    background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.5);
+                    @include flex(center, center, row);
+                    color: #ffffff;
+
+                    .fullscreen__icon {
+                        width: 40px;
+                        height: 30px;
+                    }
+
+                    &:hover {
+                        background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.8);
+                    }
                 }
             }
+
+            .product__detail__photo__list {
+                width: 95%;
+                height: 110px;
+                margin-top: 10px;
+                @include flex(center, space-between, row);
+
+                @include medium_device-up {
+                    height: 120px;
+                }
+
+                .product__detail__photo__thumbnail {
+                    width: 23%;
+                    height: 100%;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: .1s;
+
+                    background: {
+                        image: url('https://s3.us-east-1.wasabisys.com/grid50/2017/12/PDgiEauw-white-background-prudct-photography-example.jpg');
+                        size: contain;
+                        position: center;
+                        repeat: no-repeat;
+                    }
+
+                    ;
+                }
+
+                .current_thumbnail {
+                    border: 2px solid $bg-dm-corporativo-light;
+                }
+            }
+
+
+
         }
 
-        .product__detail__photo__list {
+        .product__detail__desc {
             width: 95%;
-            height: 110px;
-            margin-top: 10px;
-            @include flex(center, space-between, row);
+            height: 100%;
+            overflow-y: scroll;
+            @include scrollbarmain;
+            @include flex(center, flex-start, column);
+
+            @include medium_device_down {
+                margin-top: 20px;
+            }
 
             @include medium_device-up {
-                height: 120px;
+                height: 590px;
             }
 
-            .product__detail__photo__thumbnail {
-                width: 23%;
-                height: 100%;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: .1s;
-                background: {
-                    image: url('https://s3.us-east-1.wasabisys.com/grid50/2017/12/PDgiEauw-white-background-prudct-photography-example.jpg');
-                    size: contain;
-                    position: center;
-                    repeat: no-repeat;
-                };
+            @include large_device-up {
+                height: 650px;
             }
 
-            .current_thumbnail {
-                border: 2px solid $bg-dm-corporativo-light;
+            .product__detail__desc__title {
+                @include h1;
+                text-align: left;
+                color: #000;
             }
-        }
 
-
-
-    }
-
-    .product__detail__desc {
-        width: 95%;
-        height: 100%;
-        overflow-y: scroll;
-
-        @include flex(center, flex-start, column);
-
-        @include medium_device_down {
-            margin-top: 20px;
-        }
-
-        @include medium_device-up {
-            height: 590px;
-        }
-
-        @include large_device-up {
-            height: 650px;
-        }
-
-        .product__detail__desc__title {
-            @include h1;
-            text-align: left;
-            color: #000;
-        }
-
-        .product__detail__desc__brand {
-            width: 100%;
-            @include flex(center, flex-start, row);
-        }
-
-        .product__detail__desc__details {
-            @include flex(flex-start, flex-start, column);
-
-            @include small_device-up {
+            .product__detail__desc__brand {
+                width: 100%;
                 @include flex(center, flex-start, row);
             }
 
-            width: 100%;
-            border-bottom: 1px solid #000;
-            margin-top: 10px;
-
-            .code {
-                color: #a0a3ad;
+            .product__detail__desc__details {
+                @include flex(flex-start, flex-start, column);
 
                 @include small_device-up {
-                    margin-left: 30px;
+                    @include flex(center, flex-start, row);
+                }
+
+                width: 100%;
+                border-bottom: 1px solid #000;
+                margin-top: 10px;
+
+                .code {
+                    color: #a0a3ad;
+
+                    @include small_device-up {
+                        margin-left: 30px;
+                    }
                 }
             }
-        }
 
-        .product__detail__desc__price {
-            width: 100%;
-            margin-top: 30px;
-            border-bottom: 1px solid #000;
-
-            .sharer {
+            .product__detail__desc__price {
                 width: 100%;
-                margin-top: 10px;
-                margin-bottom: 10px;
-                @include flex(center, space-evenly, row);
-                a {
-                    color: $bg-dm-corporativo-light;
-                    margin-left: 30px;
-                    .sharer__icon {
-                        width: 30px;
-                        height: 30px;
+                margin-top: 30px;
+                border-bottom: 1px solid #000;
+                .sharer {
+                    width: 100%;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    @include flex(center, space-evenly, row);
+
+                    a {
+                        color: $bg-dm-corporativo-light;
+                        margin-left: 30px;
+
+                        .sharer__icon {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+            .product__detail__desc__text {
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .product__detail__desc__esp {
+                width: 100%;
+                @include flex(center, flex-start, column);
+
+                h5 {
+                    align-self: flex-start;
+                }
+
+                ul {
+                    width: 100%;
+
+                    li {
+                        margin-left: 30px;
                     }
                 }
             }
         }
+    }
 
-        .product__detail__desc__text {
-            margin-top: 20px;
-            width: 100%;
+    .product__detail__recommendations {
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: 100%;
+        height: 550px;
+        margin-top: 30px;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+        @include scrollbarmain;
+        .product__detail__recommendations__title{
+            text-align: center;
+
+            @include small_device-up {
+                text-align: left;
+                margin-left: 20px;
+            }
         }
+        .product__recommendation {
+            display: inline-block;
+            white-space: initial;
+            width: 300px;
+            height: 200px;
+            margin-top: 10px;
 
-        .product__detail__desc__esp {
-            width: 100%;
-            @include flex(center, flex-start, column);
+            .card__button {
+                width: 60%;
+                height: 35px;
+                outline: none;
+                border: none;
+                color: #fff;
+                background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.9);
+                outline: none;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 
-            h5 {
-                align-self: flex-start;
+                &:hover {
+                    background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 1);
+                    transition: .2s;
+                }
             }
 
-            ul {
-                width: 100%;
-
-                li {
-                    margin-left: 30px;
+            .card {
+                &:hover {
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                    transition: .2s;
+                    z-index: 4;
                 }
             }
         }
+    }
 
-        &::-webkit-scrollbar {
-            width: 4px;
-            height: 4px;
-        }
-
-        &::-webkit-scrollbar-button {
-            width: 80px;
-            height: 100%;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: #a6a6a6;
-            border: 0px none #ffffff;
-            border-radius: 50px;
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background: #8b8b8b;
-        }
-
-        &::-webkit-scrollbar-thumb:active {
-            background: #646464;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: #ffffff;
-            border: 0px none #ffffff;
-            border-radius: 47px;
-        }
-
-        &::-webkit-scrollbar-track:hover {
-            background: #dadada;
-        }
-
-        &::-webkit-scrollbar-track:active {
-            background: #cecece;
-        }
-
-        &::-webkit-scrollbar-corner {
-            background: transparent;
-        }
+    .product__detail__line {
+        height: .2px;
+        width: 95%;
+        background: #000;
+        align-self: center;
+        margin-top: 30px;
     }
 }

@@ -25,7 +25,12 @@ import { defineComponent, ref, watch } from "@nuxtjs/composition-api";
 
 export default defineComponent({
 	setup() {
-		const images = ref(['https://media.istockphoto.com/photos/pair-of-stylish-sneakers-isolated-on-white-background-white-casual-picture-id1248566148?k=20&m=1248566148&s=170667a&w=0&h=Lom1xUV8pfz2kFmzepcEzn52mlEzWj5d2TMDFKlhOsc=', 'https://flexi.shoes/blog/wp-content/uploads/sites/7/2018/06/sneaker-clasico-blanco.png', 'https://rukminim2.flixcart.com/image/714/857/jcrz6vk0/shoe/g/w/t/ds-1503-10-d-sneakerz-white-original-imafftryhbku8nus.jpeg?q=50', 'https://media.istockphoto.com/photos/one-white-sneaker-and-floating-rope-isolated-on-white-background-with-picture-id1040446784?k=20&m=1040446784&s=612x612&w=0&h=SM0ccxM_Xwua8xFc0YsB4gCTjm4_KpDeE1ppd8TewBM=']);
+		const images = ref([
+			'https://media.istockphoto.com/photos/pair-of-stylish-sneakers-isolated-on-white-background-white-casual-picture-id1248566148?k=20&m=1248566148&s=170667a&w=0&h=Lom1xUV8pfz2kFmzepcEzn52mlEzWj5d2TMDFKlhOsc=', 
+			'https://flexi.shoes/blog/wp-content/uploads/sites/7/2018/06/sneaker-clasico-blanco.png', 
+			'https://rukminim2.flixcart.com/image/714/857/jcrz6vk0/shoe/g/w/t/ds-1503-10-d-sneakerz-white-original-imafftryhbku8nus.jpeg?q=50', 
+			'https://media.istockphoto.com/photos/one-white-sneaker-and-floating-rope-isolated-on-white-background-with-picture-id1040446784?k=20&m=1040446784&s=612x612&w=0&h=SM0ccxM_Xwua8xFc0YsB4gCTjm4_KpDeE1ppd8TewBM='
+			]);
 		let mainImage = ref({});
 		mainImage.value = {image: images.value[0], idx: 0};
 		watch(mainImage, (current, old) => {
@@ -39,7 +44,7 @@ export default defineComponent({
 			}
 		})
 		const setMainImage = (image, idx) => {
-			mainImage.value = { image, idx };
+			mainImage.value = { image, idx }
 		}
 
 		return {

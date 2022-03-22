@@ -8,6 +8,11 @@
       <ProductDescComponent/>
     </div>
     </div>
+    <hr class="product__detail__line">
+    <div class="product__detail__recommendations">
+      <h3 class="product__detail__recommendations__title">Te podria interesar:</h3>
+      <ProductRecommendationComponent v-for="card in 2" :key="card" class="ml-3"/>
+    </div>
   </div>
 </template>
 
@@ -19,8 +24,9 @@ export default defineComponent({
   layout: 'main',
 
   components: {
-    ProductPhotoComponent: defineAsyncComponent(() => import('../../../components/products/detail/photo.vue')),
-    ProductDescComponent: defineAsyncComponent(() => import('../../../components/products/detail/product_desc.vue')),
+    ProductPhotoComponent: defineAsyncComponent(() => import('@/components/products/detail/photo.vue')),
+    ProductDescComponent: defineAsyncComponent(() => import('@/components/products/detail/product_desc.vue')),
+    ProductRecommendationComponent: defineAsyncComponent(() => import('@/components/products/detail/product_recommendations.vue'))
   }
 })
 </script>

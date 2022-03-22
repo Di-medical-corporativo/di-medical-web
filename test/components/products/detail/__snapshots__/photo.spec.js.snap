@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`photo detail component should match with snapshot 1`] = `
+"<div class=\\"product__detail__photo\\">
+  <div class=\\"product__detail__photo__main\\" style=\\"background-image: url(https://media.istockphoto.com/photos/pair-of-stylish-sneakers-isolated-on-white-background-white-casual-picture-id1248566148?k=20&amp;m=1248566148&amp;s=170667a&amp;w=0&amp;h=Lom1xUV8pfz2kFmzepcEzn52mlEzWj5d2TMDFKlhOsc=);\\">
+    <div class=\\"prodoct__detail__full_size\\">
+      <b-icon icon=\\"arrows-fullscreen\\" class=\\"fullscreen__icon\\"></b-icon>
+    </div>
+  </div>
+  <div class=\\"product__detail__photo__list\\">
+    <div id=\\"0\\" class=\\"product__detail__photo__thumbnail current_thumbnail\\" style=\\"background-image: url(https://media.istockphoto.com/photos/pair-of-stylish-sneakers-isolated-on-white-background-white-casual-picture-id1248566148?k=20&amp;m=1248566148&amp;s=170667a&amp;w=0&amp;h=Lom1xUV8pfz2kFmzepcEzn52mlEzWj5d2TMDFKlhOsc=);\\"></div>
+    <div id=\\"1\\" class=\\"product__detail__photo__thumbnail\\" style=\\"background-image: url(https://flexi.shoes/blog/wp-content/uploads/sites/7/2018/06/sneaker-clasico-blanco.png);\\"></div>
+    <div id=\\"2\\" class=\\"product__detail__photo__thumbnail\\" style=\\"background-image: url(https://rukminim2.flixcart.com/image/714/857/jcrz6vk0/shoe/g/w/t/ds-1503-10-d-sneakerz-white-original-imafftryhbku8nus.jpeg?q=50);\\"></div>
+    <div id=\\"3\\" class=\\"product__detail__photo__thumbnail\\" style=\\"background-image: url(https://media.istockphoto.com/photos/one-white-sneaker-and-floating-rope-isolated-on-white-background-with-picture-id1040446784?k=20&amp;m=1040446784&amp;s=612x612&amp;w=0&amp;h=SM0ccxM_Xwua8xFc0YsB4gCTjm4_KpDeE1ppd8TewBM=);\\"></div>
+  </div>
+</div>"
+`;
