@@ -130,6 +130,7 @@
 .product__detail {
     width: 100%;
     margin-top: 20px;
+    position: relative;
     @include flex(flex-start, space-around, column);
 
     @include medium_device-up {
@@ -180,18 +181,15 @@
 
                 @include medium_device-up {
                     height: 480px;
-
                     background: {
                         image: url('https://cdn.fstoppers.com/styles/full/s3/media/2015/12/07/white_background_bag_after.jpg');
                         size: contain;
                         position: center;
                         repeat: no-repeat;
-                    }
-
-                    ;
+                    };
                 }
 
-                .prodoct__detail__full_size {
+                .product__detail__full_size {
                     position: absolute;
                     right: 0;
                     top: 0;
@@ -202,7 +200,6 @@
                     background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.5);
                     @include flex(center, center, row);
                     color: #ffffff;
-
                     .fullscreen__icon {
                         width: 40px;
                         height: 30px;
@@ -402,5 +399,120 @@
         background: #000;
         align-self: center;
         margin-top: 30px;
+    }
+
+    .modal__slider {
+        position: fixed;
+        margin: auto;
+        left:0;
+        top:0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($color: #000, $alpha: 0.7);
+        transition: .1s;
+        transform-origin: -10px;
+        z-index: 4;
+        @include flex(center, center, column);
+        .slider {
+            width: 90%;
+            height: 90%;
+            @include flex(center,space-around, row);
+            background-color: #fff;
+            z-index: 1000000;
+            position: relative;
+            border-radius: 10px;
+
+            .slider__close {
+                width: 55px;
+                height: 55px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.5);
+                color: #fff;
+                border-top-right-radius: 10px;
+                @include flex(center, center, row);
+                cursor: pointer;
+                transition: .2s;
+                .icon {
+                    width: 90%;
+                    height: 90%;
+                    
+                }
+                &:hover {
+                    background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.8);
+                }
+            }
+            
+            .slider__main {
+                width: 95%;
+                height: 300px;
+                transition: .2s;
+                @include flex(center, center, column);
+                @include small_device-up {
+                    width: 90%;
+                    height: 100%;
+                }
+                overflow: hidden;
+
+                .slider__full {
+                    width: 95%;
+                    height: 95%;
+                    transition: .2s;
+                    background: {
+                        size: contain;
+                        position: center;
+                        repeat: no-repeat;
+                    };
+                }
+                
+            }
+
+            .slider__left__arrow, .slider__right__arrow{
+                position: absolute;
+                @include flex(center, center, column);
+                width: 150px;
+                height: 50px;
+                background-color: rgba($color: #000, $alpha: 0.4);
+                color: #fff;
+                transition: .2s;
+                cursor: pointer;
+                .icon{
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &:hover {
+                    background-color: rgba($color: #000, $alpha: 0.7);
+                }
+
+                @include medium_device-up {
+                    width: 50px;
+                    height: 160px;
+                }
+            }
+
+            .slider__left__arrow {
+                top: 0;
+                margin: auto;
+                @include medium_device-up {
+                    left: 0;
+                    margin: auto;
+                    bottom: 0;
+                }
+            }
+
+            .slider__right__arrow {
+                bottom: 0;
+                margin: auto;
+                @include medium_device-up {
+                    top: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+
+        }
     }
 }

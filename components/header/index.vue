@@ -8,7 +8,7 @@
             <li class="header__list__item">
                 <nuxt-link :to="{ name: 'about' }">Conocenos</nuxt-link>
             </li>
-            <li class="header__list__item icon">
+            <li class="icon">
                 <img src="../../static/images/dimedicalLogo.png" class="header__icon" alt="Dimedical corporativo icon">
             </li>
             <li class="header__list__item">

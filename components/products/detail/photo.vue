@@ -1,7 +1,7 @@
 <template>
   <div class="product__detail__photo">
 		<div class="product__detail__photo__main" :style="{ backgroundImage: `url(${mainImage.image})` }">
-			<div class="prodoct__detail__full_size">
+			<div class="product__detail__full_size" @click="activateModal">
 				<b-icon class="fullscreen__icon" icon="arrows-fullscreen"></b-icon>
 			</div>
 		</div>
@@ -24,7 +24,8 @@
 import { defineComponent, ref, watch } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-	setup() {
+	emits: ['showModal'],
+	setup(props, { emit }) {
 		const images = ref([
 			'https://media.istockphoto.com/photos/pair-of-stylish-sneakers-isolated-on-white-background-white-casual-picture-id1248566148?k=20&m=1248566148&s=170667a&w=0&h=Lom1xUV8pfz2kFmzepcEzn52mlEzWj5d2TMDFKlhOsc=', 
 			'https://flexi.shoes/blog/wp-content/uploads/sites/7/2018/06/sneaker-clasico-blanco.png', 
@@ -47,10 +48,15 @@ export default defineComponent({
 			mainImage.value = { image, idx }
 		}
 
+		const activateModal = () => {
+			emit('showModal', mainImage.value.idx);
+		} 
+
 		return {
 			images,
 			setMainImage,
 			mainImage,
+			activateModal
 		}
 	}
 })
