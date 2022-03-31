@@ -172,15 +172,23 @@
 
                 background: {
                     image: url('https://cdn.fstoppers.com/styles/full/s3/media/2015/12/07/white_background_bag_after.jpg');
-                    size: 85%;
+                    size: 87%;
                     position: center;
                     repeat: no-repeat;
+                };
+
+
+                @include small_device-up {
+                    background: {
+                        image: url('https://cdn.fstoppers.com/styles/full/s3/media/2015/12/07/white_background_bag_after.jpg');
+                        size: 70%;
+                        position: center;
+                        repeat: no-repeat;
+                    };
                 }
 
-                ;
-
                 @include medium_device-up {
-                    height: 480px;
+                    height: 485px;
                     background: {
                         image: url('https://cdn.fstoppers.com/styles/full/s3/media/2015/12/07/white_background_bag_after.jpg');
                         size: contain;
@@ -457,14 +465,10 @@
                 overflow: hidden;
 
                 .slider__full {
-                    width: 95%;
-                    height: 95%;
-                    transition: .2s;
-                    background: {
-                        size: contain;
-                        position: center;
-                        repeat: no-repeat;
-                    };
+                    width: 90%;
+                    height: 90%;
+                    transition: .2s;    
+                    object-fit: contain;
                 }
                 
             }

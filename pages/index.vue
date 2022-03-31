@@ -22,7 +22,10 @@ export default defineComponent({
     // },
 
     setup(props) {
-        useMeta({ title: 'Inicio' })
+        useMeta({ 
+            title: 'Inicio',
+            description: 'Bienvenidos a Di-medical corporativo, '    
+        })
     },
 
     components: {

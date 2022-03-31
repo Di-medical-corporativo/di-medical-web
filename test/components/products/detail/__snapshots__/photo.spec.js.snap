@@ -3,7 +3,7 @@
 exports[`photo detail component should match with snapshot 1`] = `
 "<div class=\\"product__detail__photo\\">
   <div class=\\"product__detail__photo__main\\" style=\\"background-image: url(https://media.istockphoto.com/photos/pair-of-stylish-sneakers-isolated-on-white-background-white-casual-picture-id1248566148?k=20&amp;m=1248566148&amp;s=170667a&amp;w=0&amp;h=Lom1xUV8pfz2kFmzepcEzn52mlEzWj5d2TMDFKlhOsc=);\\">
-    <div class=\\"prodoct__detail__full_size\\">
+    <div class=\\"product__detail__full_size\\">
       <b-icon icon=\\"arrows-fullscreen\\" class=\\"fullscreen__icon\\"></b-icon>
     </div>
   </div>

@@ -1,5 +1,5 @@
 import Photo from '@/components/products/detail/photo.vue';
-import { mount, shallowMount } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 
 describe('photo detail component', () => {
 

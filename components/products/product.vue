@@ -6,8 +6,6 @@
       img-top
       tag="article"
       class="card mb-4"
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom"
     >
       <b-card-text>
         Some quick example text to build on the card title and make up the bulk
