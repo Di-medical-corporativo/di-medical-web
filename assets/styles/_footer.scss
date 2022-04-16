@@ -1,6 +1,5 @@
 .footer {
     width: 100%;
-    position: absolute;
     @include flex(center, space-between, column);
     @include margin_top_components;
     background: {
