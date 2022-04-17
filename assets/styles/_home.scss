@@ -20,18 +20,18 @@
             @include flex(center, space-around, row);
             flex-wrap: wrap;
             .feature{
-                width: 80%;
-                height: 290px;
+                width: 85%;
+                height: 350px;
                 padding: 20px;
                 border-radius: 5px;
                 background-color: #F8F8F8;
-                @include flex(flex-start, space-between, column);
+                @include flex(flex-start, space-around, column);
                 margin-top: 20px;
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                 // box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
                 @include small_device-up {
                     width: 380px;
-                    height: 280px;
+                    height: 300px;
                 }
 
                 .feature__icon {
@@ -46,12 +46,18 @@
                 .feature__title {
                     color: #1F1F1F;
                     font-weight: 600;
+                    margin-top: 10px;
+                    font-size: 21px;
+                    @include small_device-up {
+                        font-size:23px;
+                    }
                 }
 
                 .feature__desc {
                     color: #1F1F1F;
                     font-weight: 500;
                     font-size: 20px;
+                    margin-top:10px;
                 }
             }
         }

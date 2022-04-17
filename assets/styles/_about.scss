@@ -37,7 +37,7 @@
         }
 
         .who__statement {
-            width: 100%;
+            width: 80%;
 
             @include small_device-up {
                 width: 50%;
@@ -52,11 +52,12 @@
             }
 
             .statement {
-                font-size: 18px;
-                padding: 5px;
-
+                font-size: 22px;
+                padding: 10px;
+                width: 100%;
                 @include small_device-up {
-                    font-size: 20px;
+                    font-size: 24px;
+                    width: 90%;
                 }
             }
         }
@@ -80,7 +81,7 @@
             z-index: 2;
             margin-top: 30px;
             @include flex(center, space-evenly, column);
-            height: 350px;
+            height: 400px;
             border-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
@@ -94,7 +95,7 @@
 
             @include medium_device-up {
                 width: 400px;
-                height: 300px;
+                height: 380px;
             }
 
             .principle__title {
@@ -110,7 +111,17 @@
                 @include flex(center, center, column);
 
                 li {
-                    font-size: 18px;
+                    font-size: 20px;
+                    margin-top: 13px;
+                }
+            }
+
+            .mision {
+                width: 90%;
+
+                li {
+                 font-size: 16px;
+                width: 90%;
                 }
             }
         }
@@ -119,6 +130,7 @@
             .principle:nth-child(1) {
                 align-self: flex-start;
                 margin-left: 20px;
+                justify-content: space-evenly;
             }
 
             .principle:nth-child(3) {

@@ -27,7 +27,7 @@ export default defineComponent ({
 
         title: {
           type: String,
-          default: () => 'Venta de material medico y de curacion'
+          default: () => 'Venta de material médico y de curación'
         }
     },
 

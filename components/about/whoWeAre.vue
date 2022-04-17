@@ -5,7 +5,10 @@
     </div>
     <div class="who__statement">
         <h1 data-aos="fade-down" class="who__statement__title">Sobre nosotros</h1>
-        <p class="statement">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus maiores voluptatem recusandae ullam cumque sapiente consequatur illum odit, inventore amet minus quos exercitationem necessitatibus dolore ratione. Sequi magni nihil delectus.</p>
+        <p class="statement">Somos una empresa dedicada a la importación y
+distribución de equipo médico y material de curación
+especializados en las áreas de terapia respiratoria,
+anestesia, sala de operaciones y terapia de infusión.</p>
     </div>
     <hexagonDecorationComponent class="decoration--7"/>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

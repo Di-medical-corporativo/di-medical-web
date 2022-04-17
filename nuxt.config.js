@@ -12,11 +12,10 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logoCorporativo.ico' }
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/styles/main',
     'aos/dist/aos.css'
@@ -62,5 +61,6 @@ export default {
   build: {
   },
 
-  plugins: [{ src: '~/plugins/aos', ssr: false }]
+  plugins: [{ src: '~/plugins/aos', ssr: false }],
+  
 }

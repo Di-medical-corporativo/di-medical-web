@@ -1,26 +1,43 @@
 <template>
   <b-card
       title="Este es el nombre del producto"
-      img-src="https://cdn.fstoppers.com/styles/full/s3/media/2015/12/07/white_background_bag_after.jpg"
-      img-alt="Image"
+      :img-src="product.images[0]"
+      :img-alt="product.name"
       img-top
       tag="article"
       class="card mb-4"
     >
       <b-card-text>
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
+        {{shortenName}}
       </b-card-text>
 
-      <button class="card__button">Mas informacion</button>
+      <button class="card__button" @click="$router.push({ name: 'products-detail-id', params: { id: product.id } })">Mas informacion</button>
       <template #footer>
-        <span>Publicado el 3/3/2022</span>
+        <span>{{product.date}}</span>
       </template>
     </b-card> 
 </template>
 
 <script>
-export default {}
+import { computed, defineComponent } from "@nuxtjs/composition-api";
+
+export default defineComponent({
+  props: {
+    product: {
+      type: Object,
+      default: () => {}
+    }
+  },
+  setup({ product }) {
+    const shortenName = computed(() => {
+      return product.description.length > 150 ? product.description.substring(0, 140) + '...' : product.description
+    })
+
+    return {
+      shortenName
+    }
+  }
+})
 </script>
 
 <style>

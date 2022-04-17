@@ -2,11 +2,17 @@
   <div class="principles">
     <div class="principle" data-aos="fade-down">
       <h1 class="principle__title">Mision</h1>
-      <p class="principle__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident eum odio perferendis, consequatur labore eius asperiores totam? Sapiente vel illo, doloremque harum omnis sed, voluptatem, eveniet nisi quod odit expedita!</p>
+      <p class="principle__desc">Ofrecer productos para la salud de alta calidad que:</p>
+      <ul class="principle__desc mision">
+        <li>Los doctores califiquen a Di-medical como la mejor opción para sus pacientes.</li>
+        <li>Los compradores elijan a Di-medical para sus pacientes.</li>
+        <li>Los empleados de Di-medical se sientan orgullosos de contribuir con su talento en el éxito de nuestros clientes.</li>
+        <li>Ser líderes mediante negocios responsables.</li>
+      </ul>
     </div>
     <div class="principle" data-aos="fade-down">
       <h1 class="principle__title">Vision</h1>
-      <p class="principle__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quos aliquid laudantium distinctio earum consectetur possimus quae, quam odit porro dolore. Quod illo repellendus quos officia asperiores in ipsam laudantium?</p>
+      <p class="principle__desc">Ser el proveedor preferido de nuestros clientes, consolidar el liderazgo, marcar la diferencia ofreciendo innovación de productos para el area de la salud y ser una empresa sustentable</p>
     </div>
     <div class="principle" data-aos="fade-down">
       <h1 class="principle__title">Valores</h1>

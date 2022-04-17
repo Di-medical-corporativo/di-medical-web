@@ -22,7 +22,7 @@ import { defineComponent } from "@nuxtjs/composition-api"
 import { defineAsyncComponent, ref } from "@vue/composition-api"
 
 export default defineComponent({
-  layout: 'main',
+  layout: 'productDetail',
   setup() {
     let showModal = ref(false);
     let actualModalImageIdx = ref(0);

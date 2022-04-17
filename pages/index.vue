@@ -11,6 +11,8 @@
 
 <script>
 import { defineComponent, defineAsyncComponent, useMeta } from '@nuxtjs/composition-api'
+import homeMeta from '../metadata/home'
+
 export default defineComponent({
     head: {},
     layout: 'main',
@@ -22,10 +24,7 @@ export default defineComponent({
     // },
 
     setup(props) {
-        useMeta({ 
-            title: 'Inicio',
-            description: 'Bienvenidos a Di-medical corporativo, '    
-        })
+        useMeta(homeMeta)
     },
 
     components: {

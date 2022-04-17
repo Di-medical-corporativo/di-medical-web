@@ -1,26 +1,26 @@
 <template>
   <div class="features">
-    <h1 class="features__title">Estas en buenas manos</h1>
+    <h1 class="features__title" data-aos="fade-right">Estas en buenas manos</h1>
     <div class="features__list">
         <div class="feature" data-aos="fade-down">
           <div class="feature__icon">
             <b-icon icon="hand-thumbs-up"  style="width: 30px; height: 30px;"></b-icon>
           </div>
-          <h3 class="feature__title">Calidad</h3>
+          <h4 class="feature__title">Excelentes precios</h4>
           <p class="feature__desc">Nos aseguramos de contar con los mejores productos de las mejores marcas</p>
         </div>
         <div class="feature" data-aos="fade-down">
           <div class="feature__icon">
-            <b-icon icon="hand-thumbs-up"  style="width: 30px; height: 30px;"></b-icon>
+            <b-icon icon="person"  style="width: 30px; height: 30px;"></b-icon>
           </div>
-          <h3 class="feature__title">Calidad</h3>
+          <h4 class="feature__title">Asesoría y Capacitación a clientes</h4>
           <p class="feature__desc">Nos aseguramos de contar con los mejores productos de las mejores marcas</p>
         </div>
         <div class="feature" data-aos="fade-down">
           <div class="feature__icon">
-            <b-icon icon="hand-thumbs-up"  style="width: 30px; height: 30px;"></b-icon>
+            <b-icon icon="star"  style="width: 30px; height: 30px;"></b-icon>
           </div>
-          <h3 class="feature__title">Calidad</h3>
+          <h4 class="feature__title">Productos de alta calidad</h4>
           <p class="feature__desc">Nos aseguramos de contar con los mejores productos de las mejores marcas</p>
         </div>
     </div>
