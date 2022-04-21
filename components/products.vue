@@ -23,8 +23,8 @@ export default defineComponent({
     },
     props: {
         position: {
-			type: String,
-			default: () => 'bottom'
+        type: String,
+        default: () => 'bottom'
 		}
     },
 })

@@ -78,10 +78,10 @@ export default defineComponent({
       }
     ])
 
-    const tryData = async () => {
-      await store.dispatch('products/getProducts')
-    }
-    tryData()
+    // const tryData = async () => {
+    //   await store.dispatch('products/getProducts')
+    // }
+    // tryData()
     return { 
       products
     }

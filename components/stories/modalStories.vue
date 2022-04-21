@@ -7,12 +7,12 @@
         <div class="stories__modal__close">
             <b-icon icon="x" class="icon" @click="emitCloseModal"></b-icon>
         </div>
-        <div class="modal__image">
+        <div class="modal__image" v-if="stories.length > 0">
             <div class="modal__image__next left" @click="counterImage--" v-if="counterImage > 0">
                 <b-icon icon="arrow-left"></b-icon>
             </div>
-            <img :src="images[counterImage].image" class="story__image" >
-            <div class="modal__image__next right" @click="counterImage++" v-if="counterImage < images.length - 1">
+            <img :src="stories[counterImage].url" class="story__image" >
+            <div class="modal__image__next right" @click="counterImage++" v-if="counterImage < stories.length - 1">
                 <b-icon icon="arrow-right"></b-icon>
             </div>
         </div>
@@ -20,15 +20,13 @@
 </template>
 
 <script>
-import { computed, defineComponent, onBeforeMount, onMounted, ref, toRefs, watch } from "@nuxtjs/composition-api"
+import { computed, defineComponent, ref, toRefs, useStore, watch } from "@nuxtjs/composition-api"
 
 export default defineComponent({
     props: {
-        images: {
-            type: Array
-        },
         idx: {
-            type: Number
+            type: Number,
+            default: () => 0
         },
         open: {
             type: Boolean
@@ -36,6 +34,8 @@ export default defineComponent({
     },
 
     setup(props, { emit }) {
+        const store = useStore()
+
         const closeModal = toRefs(props).open
         let counterImage = ref(0)
         counterImage.value = props.idx
@@ -51,12 +51,12 @@ export default defineComponent({
             counterImage.value = props.idx
         })
 
-
         return { 
             closeModal,
             showModalStyle,
             emitCloseModal,
-            counterImage
+            counterImage,
+            stories: computed(() => store.getters['stories/getStories'] || []),
         }
     }
 })
