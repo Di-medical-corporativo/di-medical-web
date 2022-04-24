@@ -1,20 +1,20 @@
 <template>
   <div class="product__detail__desc">
     <h1 class="product__detail__desc__title">
-      Lorem, ipsum dolor sit amet consectetur 
+      {{product.title}}
     </h1>
     <div class="product__detail__desc__brand">
-      <span class="brand">Marca: Nombre de la marca</span>
+      <span class="brand">Marca: {{product.brand}}</span>
     </div>
     <div class="product__detail__desc__details">
-      <span class="stock"><b-icon icon="check2" variant="success"></b-icon> En existencia</span>
-      <span class="code">Codigo del producto: 123-ABC</span>
+      <span class="stock"><b-icon :icon="product.stock? 'check2' : 'x'"  variant="success"></b-icon> {{product.stock? 'En stock' : 'Agotado'}}</span>
+      <span class="code">Codigo del producto: {{product.brand}}</span>
     </div>
     <div class="product__detail__desc__price">
-      <h2>$2000</h2>
+      <h2>${{product.price}}</h2>
       <span>Compartir producto: </span>
       <div class="sharer">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.youtube.com/">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=">
           <b-icon icon="facebook" class="sharer__icon"></b-icon>
         </a>
         <a href="">
@@ -32,17 +32,12 @@
     </div>
     <div class="product__detail__desc__text">
       <h5>Descripcion: </h5>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis natus eaque ipsam? Ipsam laborum nesciunt officiis illum, at nihil doloremque neque asperiores vitae repudiandae voluptatibus dolor repellat ab facilis unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nisi modi sint qui minima corrupti, sit aliquam, odio quasi at beatae ipsum maiores itaque iusto ullam, nihil perspiciatis consectetur reiciendis.</p>
+      <p>{{product.description}}</p>
     </div>
-    <div class="product__detail__desc__esp">
+    <div class="product__detail__desc__esp" v-if="product.specifications.length > 0">
       <h5>Especificaciones: </h5>
       <ul>
-        <li>Especificacion 1</li>
-        <li>Especificiacion 2</li>
-        <li>Especificiacion 3</li>
-        <li>Especificiacion 3</li>
-        <li>Especificiacion 3</li>
-        <li>Especificiacion 3</li>
+        <li v-for="(s, i) in product.specifications" :key="i">{{s}}</li>
       </ul>
     </div>
   </div>
@@ -50,7 +45,15 @@
 
 <script>
 export default {
+  props: {
+    product: {
+      type: Object,
+      default: () => {}
+    }
+  },
 
+  setup(props) {
+  }
 }
 </script>
 

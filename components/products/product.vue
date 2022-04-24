@@ -1,19 +1,27 @@
 <template>
   <b-card
       title="Este es el nombre del producto"
-      :img-src="product.images[0]"
-      :img-alt="product.name"
+      :img-src="product.photos[0]"
+      :img-alt="photoThumb[0]"
+      :sub-title="product.brand"
       img-top
       tag="article"
       class="card mb-4"
-    >
+    > 
       <b-card-text>
         {{shortenName}}
       </b-card-text>
 
       <button class="card__button" @click="$router.push({ name: 'products-detail-id', params: { id: product.id } })">Mas informacion</button>
+      <span>
+        <b-icon 
+        :icon="product.stock? 'check2' : 'x'" 
+        :variant="product.stock? 'success' : 'danger'"
+        ></b-icon> 
+          {{product.stock? 'En stock' : 'Agotado'}}
+      </span>
       <template #footer>
-        <span>{{product.date}}</span>
+        <span>{{date}}</span>
       </template>
     </b-card> 
 </template>
@@ -34,7 +42,12 @@ export default defineComponent({
     })
 
     return {
-      shortenName
+      shortenName,
+      photoThumb: computed(() => product.photos.filter(e => e.includes('jpg'))),
+      date: computed(() =>{
+        const date = new Date(product.date)
+        return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
+      })
     }
   }
 })

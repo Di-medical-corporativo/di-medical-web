@@ -1,7 +1,8 @@
 import storiesStore from './stories'
-
+import productsStore from './products'
 export default {
   modules: {
-    stories: storiesStore
+    stories: storiesStore,
+    products: productsStore
   }
 }
