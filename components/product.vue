@@ -1,23 +1,58 @@
 <template>
-  <div class="product">
-    <div class="product__image__wrap">
-        <div class="product__image">
-            <img class="image" src="https://via.placeholder.com/400" alt="">
-        </div>
-    </div>
-    <div class="product__title">
-        <h3>Title</h3>
-        <button class="product__info">Info</button>
-    </div>
-  </div>
+    <b-card
+      :img-src="photoThumb[0] || ''"
+      :img-alt="product.title || ''"
+      :sub-title="product.brand || ''"
+      :title="product.title || ''"
+      img-top
+      tag="article"
+      class="card mb-4"
+    > 
+      <b-card-text>
+        {{shortenName || ''}}
+      </b-card-text>
+
+      <button class="card__button" @click="$router.push({ name: 'products-detail-id', params: { id: product.id } })">Mas informacion</button>
+      <span>
+        <b-icon 
+        :icon="product.stock? 'check2' : 'x'" 
+        :variant="product.stock? 'success' : 'danger'"
+        ></b-icon> 
+          {{product.stock? 'En stock' : 'Agotado'}}
+      </span>
+      <template #footer>
+        <span>{{date || ''}}</span>
+      </template>
+    </b-card>  
 </template>
 
 <script>
+import { defineComponent, computed } from "@nuxtjs/composition-api"
 
-export default {
-    components: {
+
+export default defineComponent({
+  props: {
+    product: {
+      type: Object,
+      default: () => {}
     }
-}
+  },
+  setup({ product }) {
+    const shortenName = computed(() => {
+      return product.description.length > 150 ? product.description.substring(0, 140) + '...' : product.description
+    })
+
+    return {
+      shortenName,
+      photoThumb: computed(() => product.photos.filter(e => e.includes('jpg')) || []),
+      date: computed(() =>{
+        const date = new Date(product.date)
+        return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
+      })
+    }
+  }
+
+})
 </script>
 
 <style>

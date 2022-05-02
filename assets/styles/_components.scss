@@ -4,6 +4,7 @@
     position: relative;
     overflow: hidden;
     @include flex(center, center, column);
+
     background: {
         position: 30% 10%;
         size: cover;
@@ -23,9 +24,11 @@
         z-index: 4;
         color: #fff;
         font-size: 50px;
+
         @include medium_device-up {
             font-size: 70px;
         }
+
         text-align: center;
     }
 
@@ -79,15 +82,16 @@
         @include flex(center, space-around, column);
 
         @include small_device-up {
-            @include flex(center, center, row);        
+            @include flex(center, center, row);
         }
+
         transition: .4s;
         z-index: 3;
     }
 
     .hexagons__down {
         @include small_device-up {
-            margin-top: -60px;       
+            margin-top: -60px;
         }
 
         @include small_device-down {
@@ -136,12 +140,14 @@
         position: relative;
         clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
         background-color: $bg-dm-corporativo-dark;
+
         @include medium_device-up {
             $s: 195px;
             width: $s;
             height: calc($s * 1.1547);
         }
-        &:before{ 
+
+        &:before {
             content: "";
             $s: 160px;
             $m: 6px;
@@ -153,6 +159,7 @@
             font-size: initial;
             clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
             background-color: $bg-dm-corporativo-dark;
+
             background: {
                 image: url('~/static/images/hexagonsBackground.jpg');
                 position: bottom left;
@@ -184,16 +191,18 @@
 
 }
 
-.products {
+.products__exhibition {
     width: 100%;
     position: relative;
     overflow: hidden;
     @include flex(center, space-evenly, column);
+
     @include medium_device-up {
         width: 100%;
         height: 100vh;
     }
-    .products__button {
+
+    .products__exhibition__button {
         width: 90%;
         height: 40px;
         outline: none;
@@ -203,10 +212,12 @@
         background-color: $bg-dm-corporativo-light;
         margin-bottom: 20px;
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
         @include small_device-up {
             width: 250px;
             height: 50px;
         }
+
         z-index: 2;
     }
 
@@ -214,78 +225,15 @@
         @include h1;
         z-index: 2;
     }
-    
-    .products__list {
-        margin-bottom: 20px;
-        @include flex(center, space-between, column);
-        @include small_device-up { 
-            width: 100%;
-            @include flex(center, space-around, row);
-            flex-wrap: wrap;
+
+    .products__exhibition__list {
+        width: 100%;
+        @include flex(center, space-around, row);
+
+        .product__exhibition {
+            z-index: 3;
+            width: 90%;
         }
-        z-index: 2;
-    }
-
-    .product {
-        width: 280px;
-        height: 230px;
-        margin-top: 120px;
-        position: relative;
-        background-color: #FAFAFA;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        background: {
-            image: url('~/static/images/greyHexHor.jpg');
-            position: center;
-            size: cover;
-        }
-        border-radius: 5px;
-        .product__image__wrap {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            background-color: $bg-dm-corporativo-dark;
-            position: absolute;
-            top: -100px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            @include flex(center, center, column);
-            .product__image{ 
-                width: 95%;
-                height: 95%;
-                border-radius: 50%;
-                background-color: #D1B600;             
-                @include flex(center, center, column);
-                .image {
-                    width: 95%;
-                    height: 95%;
-                    border-radius: 50%;
-                }
-            }
-        }
-
-        .product__title {
-            width: 100%;
-            @include flex(center, space-around, column);
-            position: absolute;
-            bottom: 5px;
-
-            h3 {
-                color: $bg-dm-corporativo-light;
-                font-weight: 600;
-            }
-
-            .product__info {
-                width: 100px;
-                height: 30px;
-                color: #fff;
-                outline: none;
-                border: none;
-                cursor: pointer;
-                background-color: $bg-dm-corporativo-dark;
-            }
-        }
-
     }
 
     .wave__down {
@@ -302,28 +250,34 @@
 
 .counter {
     width: 100%;
-    background-color:#FAFAFA;
+    background-color: #FAFAFA;
     @include flex(center, space-around, column);
+
     @include small_device-up {
         @include flex(center, space-around, row);
-        
+
     }
+
     .counter__value {
         width: 100%;
         height: 280px;
         @include flex(center, center, column);
         transition: .2s;
+
         .value {
             font-size: 80px;
-            @include medium_device-up{
+
+            @include medium_device-up {
                 font-size: 85px;
             }
+
             color: $bg-dm-corporativo-light;
             transition: .5s;
         }
 
         .title {
             font-size: 20px;
+
             @include medium_device-up {
                 font-size: 25px;
             }
@@ -346,5 +300,36 @@
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     background-color: $bg-dm-corporativo-light;
 
-    
+
+}
+
+.card {
+    width: 100%;
+
+    @include small_device-up {
+        max-width: 20rem;
+
+        &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            transition: .2s;
+            z-index: 2;
+        }
+    }
+
+    .card__button {
+        width: 60%;
+        height: 35px;
+        outline: none;
+        border: none;
+        color: #fff;
+        background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.9);
+        outline: none;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+
+        &:hover {
+            background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 1);
+            transition: .2s;
+        }
+    }
+
 }

@@ -7,7 +7,7 @@
         d="M0,64L80,80C160,96,320,128,480,122.7C640,117,800,75,960,69.3C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
       ></path>
     </svg>
-    <h1 class="specialties__title">Nos especializamos en</h1>
+    <h1 class="specialties__title" data-aos="fade-left">Nos especializamos en</h1>
     <div class="specialties__content">
       <div class="specialty">
         <div class="specialty__hexagon">

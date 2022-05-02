@@ -70,37 +70,6 @@
             width: 95%;
             @include flex(center, space-around, row);
             flex-wrap: wrap;
-
-            .card {
-                width: 100%;
-
-                @include small_device-up {
-                    max-width: 20rem;
-
-                    &:hover {
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                        transition: .2s;
-                        z-index: 2;
-                    }
-                }
-
-                .card__button {
-                    width: 60%;
-                    height: 35px;
-                    outline: none;
-                    border: none;
-                    color: #fff;
-                    background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 0.9);
-                    outline: none;
-                    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-
-                    &:hover {
-                        background-color: rgba($color: $bg-dm-corporativo-light, $alpha: 1);
-                        transition: .2s;
-                    }
-                }
-
-            }
         }
     }
 
@@ -250,6 +219,7 @@
 
             .product__detail__desc__title {
                 @include h1;
+                width: 100%;
                 text-align: left;
                 color: #000;
             }
@@ -496,4 +466,83 @@
 
         }
     }
+}
+
+.product__loader {
+     width: 100%;
+     height: 100%;
+     @include flex(flex-start, space-between, column);
+
+     @include medium_device-up {
+         flex-direction: row;
+     }
+
+     .loader__product__photos {
+        width: 90%;
+        height: 100%;
+        @include flex(center, space-between, column);
+
+        @include medium_device-up { 
+            width: 49%;
+        }
+
+         .loader__product__photos__main__image {
+             width: 100%;
+             height: 400px;
+             .photo__loader {
+                 width: 100%;
+                 height: 100%;
+             }
+         }
+
+         .loader__product__photos__thumbs {
+             width: 100%;
+             height: 100px;
+             margin-top: 20px;
+            @include flex(center, space-between, row);
+             .loader__product__photos__thumb {
+                 width: 23%;
+                 height: 100%;
+
+                 .thumb__skeleton {
+                     width: 100%;
+                     height: 100%;
+                 }
+
+             }
+         }
+     }
+
+     .loader__product__desc {
+        width: 100%;
+        height: 100%;
+        @include medium_device_down {
+            margin-top: 50px;
+        }
+        @include flex(center, flex-start, column);
+
+        @include medium_device-up { 
+            width: 49%;
+        }
+
+        .loader__product__desc__title {
+            width: 90%;
+        }
+
+        .loader__product__desc__details {
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .loader__product__desc__text {
+            margin-top: 20px;
+            width: 90%;
+        }
+
+        .loader__product__desc__spec {
+            width: 90%;
+            margin-top: 20px;
+
+        }
+     }
 }

@@ -248,12 +248,13 @@
                     overflow: hidden;
                     margin-left: -23px;
                     @include prefix(border-radius, 50%);
+                    @include flex(center ,center, column);
 
-                    svg {
-                        position: relative;
-                        top: 14px;
-                        left: 14px;
+                    .timeline-icon-image {
+                        color: #fff;
+                        width: 100px;
                     }
+                    
                 }
 
                 .timeline-content {
@@ -272,6 +273,10 @@
                         font-weight: 300;
                         @include prefix(border-radius, 3px 3px 0 0);
                         text-align: right;
+                    }
+
+                    p {
+                        margin-top:10px;
                     }
 
                     &:before {
@@ -296,6 +301,10 @@
                             border-left: 0;
                             border-right: 7px solid $timeline-color;
                         }
+                    }
+
+                    p {
+                        text-align: center;
                     }
                 }
             }

@@ -1,10 +1,10 @@
 <template>
   <div class="who">
     <div class="who__team">
-        <img  src="~/static/images/1.png" alt="" data-aos="fade-up">
+        <img src="~/static/images/1.svg" alt="Di-medical corporativo team" data-aos="fade-up">
     </div>
     <div class="who__statement">
-        <h1 data-aos="fade-down" class="who__statement__title">Sobre nosotros</h1>
+        <h1 data-aos="fade-left" class="who__statement__title">Sobre nosotros</h1>
         <p class="statement">Somos una empresa dedicada a la importación y
 distribución de equipo médico y material de curación
 especializados en las áreas de terapia respiratoria,

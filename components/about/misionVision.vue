@@ -1,7 +1,7 @@
 <template>
   <div class="principles">
     <div class="principle" data-aos="fade-down">
-      <h1 class="principle__title">Mision</h1>
+      <h1 class="principle__title">Misión</h1>
       <p class="principle__desc">Ofrecer productos para la salud de alta calidad que:</p>
       <ul class="principle__desc mision">
         <li>Los doctores califiquen a Di-medical como la mejor opción para sus pacientes.</li>
@@ -11,7 +11,7 @@
       </ul>
     </div>
     <div class="principle" data-aos="fade-down">
-      <h1 class="principle__title">Vision</h1>
+      <h1 class="principle__title">Visión</h1>
       <p class="principle__desc">Ser el proveedor preferido de nuestros clientes, consolidar el liderazgo, marcar la diferencia ofreciendo innovación de productos para el area de la salud y ser una empresa sustentable</p>
     </div>
     <div class="principle" data-aos="fade-down">

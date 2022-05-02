@@ -5,7 +5,7 @@
     </svg>
     <h1 data-aos="fade-left" class="contact__hero__title">Aun no estas convencido?</h1>
     <div class="contact__hero__desc">
-      <p class="desc"> Contacta con uno de nuestros asesores, resolvera todas tus dudas.</p>
+      <p class="desc"> Contacta con uno de nuestros asesores, resolverá todas tus dudas.</p>
       <button class="contact__hero__button">Contacto</button>
     </div>
     <hexagonDecorationComponent class="decoration--6"/>

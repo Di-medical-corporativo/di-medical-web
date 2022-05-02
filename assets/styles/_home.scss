@@ -21,7 +21,7 @@
             flex-wrap: wrap;
             .feature{
                 width: 85%;
-                height: 350px;
+                height: 300px;
                 padding: 20px;
                 border-radius: 5px;
                 background-color: #F8F8F8;
@@ -31,7 +31,7 @@
                 // box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
                 @include small_device-up {
                     width: 380px;
-                    height: 300px;
+                    height: 320px;
                 }
 
                 .feature__icon {
@@ -56,8 +56,11 @@
                 .feature__desc {
                     color: #1F1F1F;
                     font-weight: 500;
-                    font-size: 20px;
+                    font-size: 18px;
                     margin-top:10px;
+                    @include small_device-up {
+                        font-size:20px;
+                    }
                 }
             }
         }

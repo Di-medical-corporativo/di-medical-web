@@ -1,15 +1,16 @@
 <template>
   <div class="product__detail">
-		<div class="product__detail__main" v-if="!loading">
-      <div class="product__detail__section">
-        <ProductPhotoComponent @showModal="activateModal" :photos="product[0].photos"/>
-      </div>
-    <div class="product__detail__section">
-      <ProductDescComponent :product="product[0]"/>
-    </div>
+    <template v-if="!loading">
+      <div class="product__detail__main">
+        <div class="product__detail__section">
+          <ProductPhotoComponent @showModal="activateModal" :photos="product[0].photos"/>
+        </div>
+        <div class="product__detail__section">
+          <ProductDescComponent :product="product[0]"/>
+        </div>
     </div>
     <hr class="product__detail__line">
-    <div class="product__detail__recommendations">
+    <div class="product__detail__recommendations" v-if="false">
       <h3 class="product__detail__recommendations__title">Te podria interesar:</h3>
       <ProductRecommendationComponent v-for="card in 2" :key="card" class="ml-3"/>
     </div>
@@ -20,11 +21,13 @@
       @closeModal="activateModal"
       :images="product[0].photos"
     />
+    </template>
+    <ProductLoaderSkeletonComponent v-else/>
   </div>
 </template>
 
 <script>
-import { defineComponent, useRoute, useStore, computed} from "@nuxtjs/composition-api"
+import { defineComponent, useRoute, useStore, computed, useRouter} from "@nuxtjs/composition-api"
 import { defineAsyncComponent, ref } from "@vue/composition-api"
 
 import useProduct from '@/composables/useProduct'
@@ -33,6 +36,7 @@ export default defineComponent({
   layout: 'productDetail',
   setup() {
     const route = useRoute()
+    const router = useRouter()
     const store = useStore()
     const { getProducts, loading } = useProduct()
 
@@ -45,19 +49,26 @@ export default defineComponent({
 
     getProducts()
 
+    const product = computed(() => store.getters['products/getProductById'](route.value.params.id) || [])
+    if(!product.value) {
+      return router.push({ name: "products" })
+    }
+
     return {
       showModal,
       activateModal,
       actualModalImageIdx,
       loading,
-      product: computed(() => store.getters['products/getProductById'](route.value.params.id) || [])
+      product
     }
   },
   components: {
     ProductPhotoComponent: defineAsyncComponent(() => import('@/components/products/detail/photo.vue')),
     ProductDescComponent: defineAsyncComponent(() => import('@/components/products/detail/product_desc.vue')),
-    ProductRecommendationComponent: defineAsyncComponent(() => import('@/components/products/detail/product_recommendations.vue')),
-    ModalSliderComponent: defineAsyncComponent(() => import('@/components/products/detail/modalSlider.vue'))
+    ProductRecommendationComponent: defineAsyncComponent(() => import('@/components/products/product.vue')),
+    ModalSliderComponent: defineAsyncComponent(() => import('@/components/products/detail/modalSlider.vue')),
+    ProductLoaderSkeletonComponent: defineAsyncComponent(() => import('@/components/products/detail/loaderProduct.vue'))
+  
   }
 })
 </script>
