@@ -1,6 +1,6 @@
 <template>
   <div class="products__exhibition" style="{ 'flex-direction': 'row' }">
-    <h1 class="products__title" data-aos="fade-right">Nuestros productos:</h1>
+    <h1 class="products__title" data-aos="fade-right">Nuestros productos</h1>
     <div class="products__exhibition__list" v-if="!loading">
       <ProductComponent 
         v-for="( p, i ) in firstThree" 

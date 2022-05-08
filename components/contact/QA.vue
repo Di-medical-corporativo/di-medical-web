@@ -9,50 +9,47 @@
     </svg>
     <h1 class="qa__title" data-aos="fade-right">Preguntas frecuentes</h1>
     <div class="qa__questions" role="tablist">
-      <b-card no-body class="mb-1 qa__question">
-        <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block v-b-toggle.accordion-1 variant="info"
-            >Accordion 1</b-button
-          >
+      <b-card no-body class="qa__question">
+        <b-card-header role="tab" class="qa__header">
+          <b-card-text block v-b-toggle.accordion-1>Pregunta</b-card-text>
         </b-card-header>
         <b-collapse
           id="accordion-1"
-          visible
           accordion="my-accordion"
           role="tabpanel"
         >
           <b-card-body>
-            <b-card-text
-              >I start opened because <code>visible</code> is
-              <code>true</code></b-card-text
-            >
-            <b-card-text>{{ text }}</b-card-text>
-          </b-card-body>
-        </b-collapse>
-      </b-card>
-
-      <b-card no-body class="mb-1 qa__question">
-        <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block v-b-toggle.accordion-2 variant="info"
-            >Accordion 2</b-button
-          >
-        </b-card-header>
-        <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-          <b-card-body>
-            <b-card-text>{{ text }}</b-card-text>
+            <b-card-text>Pregunta 1</b-card-text>
           </b-card-body>
         </b-collapse>
       </b-card>
 
       <b-card no-body class="qa__question">
-        <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block v-b-toggle.accordion-3 variant="info"
-            >Accordion 3</b-button
-          >
+        <b-card-header role="tab" class="qa__header">
+          <b-card-text block v-b-toggle.accordion-2>Pregunta</b-card-text>
         </b-card-header>
-        <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+        <b-collapse
+          id="accordion-2"
+          accordion="my-accordion"
+          role="tabpanel"
+        >
           <b-card-body>
-            <b-card-text>{{ text }}</b-card-text>
+            <b-card-text>Pregunta 1</b-card-text>
+          </b-card-body>
+        </b-collapse>
+      </b-card>
+
+      <b-card no-body class="qa__question">
+        <b-card-header role="tab" class="qa__header">
+          <b-card-text block v-b-toggle.accordion-3>Pregunta</b-card-text>
+        </b-card-header>
+        <b-collapse
+          id="accordion-3"
+          accordion="my-accordion"
+          role="tabpanel"
+        >
+          <b-card-body>
+            <b-card-text>Pregunta 1</b-card-text>
           </b-card-body>
         </b-collapse>
       </b-card>
@@ -65,8 +62,7 @@ import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   setup(props, context) {
-    const closeOtherCollapsables = (actual) => {};
-    console.log(context);
+    
   },
 });
 </script>

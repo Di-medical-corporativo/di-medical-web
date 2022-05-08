@@ -2,7 +2,6 @@
   <div class="product__detail__photo">
     <div class="product__detail__photo__main">
       <video 
-        autoplay
         muted
         v-if="mainImage.image.includes('mp4')" 
         class="photo__main"
@@ -29,7 +28,6 @@
         :key="id"
       >
         <video
-          autoplay
           muted
           v-if="img.includes('mp4')"
           class="product__detail__photo__thumbnail video"

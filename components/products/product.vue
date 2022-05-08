@@ -12,7 +12,7 @@
         {{shortenName || ''}}
       </b-card-text>
 
-      <button class="card__button" @click="$router.push({ name: 'products-detail-id', params: { id: product.id } })">Mas informacion</button>
+      <button class="card__button" @click="$router.push({ name: 'products-detail-id', params: { id: productTitle, name: product.id } })">Mas informacion</button>
       <span>
         <b-icon 
         :icon="product.stock? 'check2' : 'x'" 
@@ -47,7 +47,8 @@ export default defineComponent({
       date: computed(() =>{
         const date = new Date(product.date)
         return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
-      })
+      }),
+      productTitle: computed(() => product.title.toLowerCase().split(' ').join('-'))
     }
   }
 })

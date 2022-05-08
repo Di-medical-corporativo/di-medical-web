@@ -166,34 +166,12 @@
             height: 450px;
             @include flex(center, space-around, column);
             .qa__question {
+                max-width: 700px;
                 @include flex(center, center, column);
-                width: 100%;
-
-                .question { 
+                .qa__header {
                     width: 100%;
-
-                    @include medium_device-up {
-                        width: 800px;
-                    }
-
-                    @include large_device-up {
-                        width: 900px;
-                    }
-                    border-bottom: 1px solid #bdbbbb;
-                    @include flex(center, space-around, row);
                 }
 
-                .qa__question__collapsable {
-                    width: 100%;
-                    margin-top: 10px;
-                    @include medium_device-up {
-                        width: 800px;
-                    }
-
-                    @include large_device-up {
-                        width: 900px;
-                    }
-                }
             }
         }
 

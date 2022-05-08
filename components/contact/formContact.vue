@@ -1,7 +1,7 @@
 <template>
   <div class="form__contact">
     <div class="form__info">
-      <h2>Informacion de contacto:</h2>
+      <h2>Información de contacto:</h2>
       <p class="form__info__desc">
         Contactanos, nuestro personal se encuentra capacitado para guiarte y
         asesorarte en tu compra.

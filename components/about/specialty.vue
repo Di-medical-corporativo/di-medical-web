@@ -18,7 +18,7 @@
             srcset=""
           />
         </div>
-        <h3 class="specialty__title">Especialidad</h3>
+        <h3 class="specialty__title">Inhaloterapia</h3>
       </div>
       <div class="specialty">
         <div class="specialty__hexagon">
@@ -29,7 +29,7 @@
             srcset=""
           />
         </div>
-        <h3 class="specialty__title">Especialidad</h3>
+        <h3 class="specialty__title">Terapia Intensiva</h3>
       </div>
       <div class="specialty">
         <div class="specialty__hexagon">
@@ -40,7 +40,7 @@
             srcset=""
           />
         </div>
-        <h3 class="specialty__title">Especialidad</h3>
+        <h3 class="specialty__title">Anestesia</h3>
       </div>
     </div>
   </div>
