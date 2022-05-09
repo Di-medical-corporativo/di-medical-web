@@ -11,7 +11,7 @@
     <div class="qa__questions" role="tablist">
       <b-card no-body class="qa__question">
         <b-card-header role="tab" class="qa__header">
-          <b-card-text block v-b-toggle.accordion-1>Pregunta</b-card-text>
+          <b-card-text block v-b-toggle.accordion-1>¿Precio de los productos?</b-card-text>
         </b-card-header>
         <b-collapse
           id="accordion-1"
@@ -19,14 +19,14 @@
           role="tabpanel"
         >
           <b-card-body>
-            <b-card-text>Pregunta 1</b-card-text>
+            <b-card-text>Contamos con un equipo de atención a clientes que fortalece nuestra calidad del servicio donde responderán de manera inmediata a tus cotizaciones.</b-card-text>
           </b-card-body>
         </b-collapse>
       </b-card>
 
       <b-card no-body class="qa__question">
         <b-card-header role="tab" class="qa__header">
-          <b-card-text block v-b-toggle.accordion-2>Pregunta</b-card-text>
+          <b-card-text block v-b-toggle.accordion-2>¿Tiempos de entrega y envío?</b-card-text>
         </b-card-header>
         <b-collapse
           id="accordion-2"
@@ -34,14 +34,14 @@
           role="tabpanel"
         >
           <b-card-body>
-            <b-card-text>Pregunta 1</b-card-text>
+            <b-card-text>Tenemos más de 3500 productos de entrega inmediata. Di-medical se esfuerza al máximo para que los artículos lleguen a su destino en un plazo de 1 a 5 días hábiles.</b-card-text>
           </b-card-body>
         </b-collapse>
       </b-card>
 
       <b-card no-body class="qa__question">
         <b-card-header role="tab" class="qa__header">
-          <b-card-text block v-b-toggle.accordion-3>Pregunta</b-card-text>
+          <b-card-text block v-b-toggle.accordion-3>¿Formas de pago?</b-card-text>
         </b-card-header>
         <b-collapse
           id="accordion-3"
@@ -49,7 +49,22 @@
           role="tabpanel"
         >
           <b-card-body>
-            <b-card-text>Pregunta 1</b-card-text>
+            <b-card-text>Tenemos pagos con tarjeta y transferencia electrónica. A nuestros clientes frecuentes y que cumplen con algunos requisitos ofertamos créditos.</b-card-text>
+          </b-card-body>
+        </b-collapse>
+      </b-card>
+
+      <b-card no-body class="qa__question">
+        <b-card-header role="tab" class="qa__header">
+          <b-card-text block v-b-toggle.accordion-4>¿Ofrecen descuentos?</b-card-text>
+        </b-card-header>
+        <b-collapse
+          id="accordion-4"
+          accordion="my-accordion"
+          role="tabpanel"
+        >
+          <b-card-body>
+            <b-card-text>Realizamos descuentos atractivos y a nuestros clientes frecuentes damos precios especiales por compras por volumen.</b-card-text>
           </b-card-body>
         </b-collapse>
       </b-card>

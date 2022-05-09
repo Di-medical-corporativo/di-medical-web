@@ -133,10 +133,11 @@
                 width: 85%;
                 height: 420px;
                 z-index: 2;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
                 border-radius: 10px;
+                @include flex(center, space-between, column);
                 @include medium_device-up {
-                    width: 330px;
+                    width: 300px;
                 }
 
                 @include medium_device-down {
@@ -148,6 +149,21 @@
                     position: center;
                     size:cover;
                 };
+
+                .office__title {
+                    color: $bg-dm-corporativo-light;
+                    margin-top: 30px;
+                }
+
+                .office__map {
+                    width: 100%;
+                    @include flex(center, center, column);
+                    .map {
+                        width: 100%;
+                        border-radius: 10px;
+                        height: 280px;
+                    }
+                }
             }
         }
     }

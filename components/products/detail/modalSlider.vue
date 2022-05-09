@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { computed, defineComponent, ref, toRefs, useRoute, useStore, watch } from "@nuxtjs/composition-api"
+import { computed, defineComponent, ref, toRefs, watch } from "@nuxtjs/composition-api"
 
 export default defineComponent({
     props: {
@@ -40,13 +40,12 @@ export default defineComponent({
         },
         actualImage: {
           type: Number
+        },
+        images: {
+          type: Array
         }
     },
     setup(props, { emit }) {
-
-      const store = useStore()
-      const route = useRoute()
-
       let show = toRefs(props).showModal
       let counterImage = ref(0)
       counterImage.value = props.actualImage
@@ -66,7 +65,6 @@ export default defineComponent({
         show,
         counterImage,
         showModalStyle,
-        images: computed(() => store.getters['products/getProductById'](route.value.params.id)[0].photos || [])
       }
     }
 })

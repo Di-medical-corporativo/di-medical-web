@@ -10,9 +10,9 @@
         </div>
     </div>
     <hr class="product__detail__line">
-    <div class="product__detail__recommendations" v-if="false">
+    <div class="product__detail__recommendations" v-if="productsRecommended.length > 0">
       <h3 class="product__detail__recommendations__title">Te podria interesar:</h3>
-      <ProductRecommendationComponent v-for="card in 2" :key="card" class="ml-3"/>
+      <ProductRecommendationComponent v-for="card in productsRecommended" :key="card.id" :product="card" class="ml-3 product__recommendation"/>
     </div>
     <ModalSliderComponent 
       v-if="!loading"
@@ -27,55 +27,75 @@
 </template>
 
 <script>
-import { defineComponent, useRoute, useStore, computed, useRouter, useMeta} from "@nuxtjs/composition-api"
-import { defineAsyncComponent, onMounted, ref } from "@vue/composition-api"
+import { defineComponent, useRoute, useRouter, useMeta} from "@nuxtjs/composition-api"
+import { defineAsyncComponent, ref } from "@vue/composition-api"
 
 import useProduct from '@/composables/useProduct'
-import productMeta from '../../../metadata/product'
+
 export default defineComponent({
   layout: 'productDetail',
   head: {},
   setup() {
     const route = useRoute()
     const router = useRouter()
-    const store = useStore()
-    const { getProducts, loading } = useProduct()
+    const { getProductByName, getRecommendedProducts } = useProduct()
 
     const showModal = ref(false);
+    const product = ref([
+      {
+        title: '',
+        photos: [],
+        desc: ''
+      }
+    ])
+    const productsRecommended = ref([])
+    const loading = ref(true)
     const actualModalImageIdx = ref(0);
+    const productTitle = route.value.params.id.replace(/-/g, ' ')
+
     const activateModal = (idx) => {
       showModal.value = !showModal.value
       actualModalImageIdx.value = idx;
     }
 
-    getProducts()
-    const product = computed(() => store.getters['products/getProductById'](route.value.params.id) || [])
-    const productTitle = route.value.params.id.replace(/-/g, ' ');
-    if(!product.value) {
-      return router.push({ name: "products" })
+    const getProduct = async () => {
+      try {
+        loading.value = true;
+        const p = await getProductByName(productTitle)
+        if(p.length == 0) {
+          return router.push({ name: "products" })
+        }
+        product.value = p;
+        loading.value = false;
+        productsRecommended.value = await getRecommendedProducts(p[0].id)
+      } catch (error) {
+        console.log(error);
+        return router.push({ name: "products" })
+      }
+      
     }
 
-    console.log(store.getters['products/getProductById'](route.value.params.id));
-      useMeta({
-      title: `${productTitle.toLocaleUpperCase()} | Lo más selecto de las mejores marcas para el mercado hospitalario.`,
+    getProduct()
+    useMeta({
+      title: productTitle.toUpperCase() + ' | Lo más selecto de las mejores marcas para el mercado hospitalario.',
       meta: [
-          { hid: 'description', name: 'description', content: 'Conoce nuestros productos, lo más selecto de las mejores marcas para el mercado hospitalario.' },
-          { hid: 'author', name: 'author', content: 'Di-medical corporativo' },
-          { hid: 'og-title', name: 'og:title', content: `${productTitle.toLocaleUpperCase()} | Lo más selecto de las mejores marcas para el mercado hospitalario.` },
+          { hid: 'description', name: 'description', content: 'Conoce nuestros productos, lo más selecto de las mejores marcas para el mercado hospitalario.'},
+          { hid: 'author', name: 'author', content: 'Di medical corporativo' },
+          { hid: 'og-title', name: 'og:title', content: `${productTitle.toUpperCase()} | Lo más selecto de las mejores marcas para el mercado hospitalario.` },
           { hid: 'og-type', name: 'og:type', content: 'website' },
           { hid: 'og-url', name: 'og:url', content: `https://www.dimedicalcorporativo.mx/products/detail/${route.value.params.id}` },
-          { hid: 'og-description', name: 'og:description', content: 'Conoce nuestros productos, lo más selecto de las mejores marcas para el mercado hospitalario.' },
-          { hid: 'og-image', name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2FlogoCorporativo.png?alt=media&token=ca32a756-7656-4259-b5b7-921c11a0a3e8' }
+          { hid: 'og-description', name: 'og:description', content: product.value[0].title },
+          { hid: 'og-image', name: 'og:image', content: product.value[0].photos[0] }
         ]
     })
-    
 
     return {
       showModal,
       activateModal,
       actualModalImageIdx,
       loading,
-      product
+      product,
+      productsRecommended
     }
   },
   components: {

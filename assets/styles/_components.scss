@@ -228,8 +228,12 @@
 
     .products__exhibition__list {
         width: 100%;
-        @include flex(center, space-around, row);
+        @include flex(center, space-around, column);
 
+        @include medium_device-up { 
+            flex-direction: row;
+        }
+        
         .product__exhibition {
             z-index: 3;
             width: 90%;
