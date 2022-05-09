@@ -8,7 +8,7 @@
             <li class="header__list__item">
                 <nuxt-link :to="{ name: 'about' }">Conocenos</nuxt-link>
             </li>
-            <li class="icon">
+            <li class="icon" @click="$router.push({ name: 'index' })">
                 <img src="../../static/images/dimedicalLogo.png" class="header__icon" alt="Dimedical corporativo icon">
             </li>
             <li class="header__list__item">
@@ -22,7 +22,7 @@
     </nav>
     <nav class="header__nav-mobile">
         <ul class="header__list-mobile">
-            <li class="header__list__item-mobile icon">
+            <li class="header__list__item-mobile icon" @click="$router.push({ name: 'index' })">
                 <img src="../../static/images/dimedicalLogo.png" class="header__icon" alt="Dimedical corporativo icon" srcset="">
             </li>
             <li class="header__list__item-mobile" @click="showNav = !showNav">

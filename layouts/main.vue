@@ -3,9 +3,9 @@
         <HeaderComponent/>
         <StoriesComponent/>
         <Nuxt/>
+        <UpComponent/>
+
         <FooterComponent/>
-
-
     </div>
 </template>
 
@@ -15,7 +15,9 @@ export default defineComponent({
     components: {
         HeaderComponent: defineAsyncComponent(() => import('../components/header/index.vue')),
         FooterComponent: defineAsyncComponent(() => import('../components/footer/index.vue')),
-        StoriesComponent: defineAsyncComponent(() => import('../components/stories/index.vue'))
+        StoriesComponent: defineAsyncComponent(() => import('../components/stories/index.vue')),
+        UpComponent: defineAsyncComponent(() => import('../components/toUp.vue'))
+    
     },
 
     setup(_, { root }) {

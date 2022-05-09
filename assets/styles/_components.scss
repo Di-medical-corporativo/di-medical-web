@@ -337,3 +337,31 @@
     }
 
 }
+
+.up {
+    width: 40px;
+    height: 40px;
+    @include flex(center, center, row);
+    cursor: pointer;
+    position: fixed;
+    transition: .2s;
+    left: 10px;
+    bottom: 10px;
+    z-index: 10;
+    color: #fff;
+    .up__icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    @include small_device-up { 
+        width: 50px;
+        height: 50px;
+        @include flex(center, center, row);
+        .up__icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    background-color: $bg-dm-corporativo-light;
+}
