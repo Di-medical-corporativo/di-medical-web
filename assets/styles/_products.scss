@@ -93,6 +93,7 @@
 
         @include medium_device-up {
             flex-direction: row;
+            align-self: center;
         }
 
         .product__detail__section {

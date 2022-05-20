@@ -19,25 +19,29 @@ export default {
     },
     methods: {
         handleScroll(){
-            let up = document.querySelector(".up")
+            if(process.client) {
+                let up = document.querySelector(".up")
             if(document.documentElement.scrollTop > 100){
                 up.style.display = "flex"
             } else {
                 up.style.display = "none"
             }
+            }
         },
         up(){
+            if(process.client){
                 window.scrollTo({
                     top:0,
                     behavior: "smooth"
-            })
+                })
+            }
         }
     },
     created(){
-        window.addEventListener("scroll", this.handleScroll)
+        if(process.client) window.addEventListener("scroll", this.handleScroll)
     },
      destroyed (){
-         window.removeEventListener("scroll", this.handleScroll)
+         if(process.client) window.removeEventListener("scroll", this.handleScroll)
      }
 }
 </script>

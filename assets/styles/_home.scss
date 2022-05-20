@@ -30,13 +30,13 @@
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                 // box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
                 @include small_device-up {
-                    width: 380px;
-                    height: 320px;
+                    width: 300px;
+                    height: 290px;
                 }
 
                 .feature__icon {
-                    width: 70px;
-                    height: 70px;
+                    width: 50px;
+                    height: 50px;
                     border-radius: 50%;
                     background-color: $bg-dm-corporativo-light;
                     @include flex(center, center, column);
@@ -47,19 +47,19 @@
                     color: #1F1F1F;
                     font-weight: 600;
                     margin-top: 10px;
-                    font-size: 21px;
+                    font-size: 17px;
                     @include small_device-up {
-                        font-size:23px;
+                        font-size:21px;
                     }
                 }
 
                 .feature__desc {
                     color: #1F1F1F;
                     font-weight: 500;
-                    font-size: 18px;
-                    margin-top:10px;
+                    font-size: 15px;
+                    margin-top:12px;
                     @include small_device-up {
-                        font-size:20px;
+                        font-size:17px;
                     }
                 }
             }

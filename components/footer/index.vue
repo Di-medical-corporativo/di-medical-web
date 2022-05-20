@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <h4 class="footer__title">Lo más selecto de las mejores marcas para el mercado hospitalario.</h4>
+    <h4 class="footer__title">Lo más selecto de las mejores marcas para el mercado hospitalario. | Las grandes marcas se distinguen por sus colores.</h4>
     <div class="footer__content">
       <div class="footer__section">
         <h5 class="adress__title">Sucursal CDMX</h5>
@@ -12,8 +12,9 @@
               Monterrey, Nuevo León C.P 64366
         </small>
       </div>
-      <div class="footer__section">
+      <div class="dimedical-logos">
         <img class="icon" src="../../static/images/dimedicalLogo.png" alt="Dimedical corporativo icon">
+        <img class="icon sur" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2FnoBackLogo.jpg?alt=media&token=25cb30e2-b960-43a0-918d-2da96a37956a" alt="Dimedical corporativo icon">
       </div>
       <div class="footer__section">
         <div class="footer__media">

@@ -1,6 +1,6 @@
 .heroimage {
     width: 100%;
-    height: 400px;
+    height: 450px;
     position: relative;
     overflow: hidden;
     @include flex(center, center, column);
@@ -23,10 +23,10 @@
     .heroimage__title {
         z-index: 4;
         color: #fff;
-        font-size: 50px;
+        font-size: 40px;
 
         @include medium_device-up {
-            font-size: 70px;
+            font-size: 55px;
         }
 
         text-align: center;
@@ -39,7 +39,7 @@
     }
 
     @include small_device-up {
-        height: 500px;
+        height: 550px;
 
         background: {
             position: bottom;
@@ -51,7 +51,7 @@
     }
 
     @include medium_device-up {
-        height: 550px;
+        height: 640px;
 
         background: {
             position: bottom;
@@ -343,6 +343,7 @@
     height: 40px;
     @include flex(center, center, row);
     cursor: pointer;
+    display: none;
     position: fixed;
     transition: .2s;
     left: 10px;
@@ -358,6 +359,7 @@
         width: 50px;
         height: 50px;
         @include flex(center, center, row);
+        display: none;
         .up__icon {
             width: 40px;
             height: 40px;

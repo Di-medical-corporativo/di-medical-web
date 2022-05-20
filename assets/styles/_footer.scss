@@ -2,16 +2,19 @@
     width: 100%;
     @include flex(center, space-between, column);
     @include margin_top_components;
+
     background: {
         image: url('~/static/images/headerBackground.jpg');
         position: bottom left;
         size: cover;
     }
+
     .footer__title {
         color: #fff;
-        font-weight:600;
+        font-weight: 600;
         text-align: center;
         margin-top: 30px;
+        font-size: 20px;
     }
 
     .footer__content {
@@ -19,13 +22,15 @@
         margin-top: 30px;
         @include flex(center, space-around, row);
         flex-wrap: wrap;
+
         .footer__section {
             @include flex(center, space-between, column);
             height: 100%;
+
             .icon {
                 width: 200px;
             }
-            
+
             .adress__title {
                 text-align: center;
                 color: #fff;
@@ -34,7 +39,7 @@
             }
 
             small {
-                text-align: justify;
+                text-align: center;
                 color: #fff;
                 margin-bottom: 10px;
             }
@@ -42,6 +47,7 @@
             .mail {
                 margin-top: 20px;
                 color: #fff;
+
                 margin: {
                     left: 10px;
                     right: 10px;
@@ -50,6 +56,7 @@
 
             .copy {
                 color: #fff;
+                text-align: center;
             }
 
             @include medium_device-down {
@@ -63,8 +70,10 @@
             .footer__media {
                 width: 90%;
                 @include flex(center, space-around, row);
+
                 a {
                     color: #fff;
+
                     .media__icon {
                         width: 30px;
                         height: 30px;
@@ -76,6 +85,28 @@
                 color: #fff;
                 border: none;
             }
+        }
+    }
+
+    .dimedical-logos {
+        @include flex(center, space-between, column);
+        height: 100%;
+        .icon {
+            width: 200px;   
+        }
+
+        @include medium_device-down {
+            width: 100%;
+        }
+
+        @include medium_device-up {
+            width: 33%;
+            flex-direction: row;
+
+        }
+
+        .sur {
+            filter: brightness(0) invert(1);
         }
     }
 }

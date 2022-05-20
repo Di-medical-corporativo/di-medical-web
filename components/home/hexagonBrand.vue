@@ -18,7 +18,7 @@
 
       <div class="hexagon__wrap">
         <div class="hexagon">
-          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2FFisher.png?alt=media&token=58a79420-1cce-4435-8b61-9cceebb31689" alt="Fisher logo" srcset="" />
+          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2FBan%CC%83o%20Facil.png?alt=media&token=ad1ea014-7449-48df-9c95-179e416fb8d4" alt="Baño Fácil logo" srcset="" />
         </div>
       </div>
     </div>
