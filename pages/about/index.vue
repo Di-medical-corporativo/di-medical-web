@@ -5,7 +5,7 @@
     <PrinciplesComponent/>
     <TimeLineComponent/>
     <SpecialtyComponent/>
-    <ProductsComponent position="top"/>
+    <PartnersComponent/>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ export default defineComponent({
     PrinciplesComponent:defineAsyncComponent(() => import('../../components/about/misionVision.vue')), 
     TimeLineComponent: defineAsyncComponent(() => import('../../components/about/timeLine.vue')),
     SpecialtyComponent: defineAsyncComponent(() => import('../../components/about/specialty.vue')),
-    ProductsComponent: defineAsyncComponent(() => import('../../components/products.vue')),
+    PartnersComponent: defineAsyncComponent(() => import('../../components/about/partners.vue'))
   },
   setup(props) {
     useMeta(aboutMeta)

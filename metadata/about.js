@@ -1,5 +1,5 @@
 const aboutMeta = {
-    title: 'Sobre nosotros | Lo más selecto de las mejores marcas para el mercado hospitalario.',
+    title: 'Conocenos | Lo más selecto de las mejores marcas para el mercado hospitalario.',
     meta: [
         { hid: 'description', name: 'description', content: 'Empresa fundada en el año 2018 dedicada a la importación y distribución de equipo médico y material de curación, especializados en las áreas de terapia respiratoria, anestesia, entre otras.' },
         { hid: 'author', name: 'author', content: 'Di-medical corporativo' },

@@ -20,9 +20,6 @@
         ></b-icon> 
           {{product.stock? 'En stock' : 'Agotado'}}
       </span>
-      <template #footer>
-        <span>{{date || ''}}</span>
-      </template>
     </b-card>  
 </template>
 
