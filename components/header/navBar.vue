@@ -1,17 +1,17 @@
 <template>
-  <div class="navbar" id="nav" :style="{ display: open? 'flex' : 'none' }">
+  <div class="navbar" id="nav" :style="{ left: open? '0' : '-100vw' }">
     <ul class="navbar__list">
-        <li class="navbar__list__item">
-            <nuxt-link :to="{ name: 'index' }" data-text="inicio">Inicio</nuxt-link>
+        <li class="navbar__list__item" @click="$emit('close')">
+            <nuxt-link :to="{ name: 'index' }">Inicio</nuxt-link>
         </li>
-        <li class="navbar__list__item">
-            <nuxt-link :to="{ name: 'about' }" data-text="Conocenos">Conocenos</nuxt-link>
+        <li class="navbar__list__item" @click="$emit('close')">
+            <nuxt-link :to="{ name: 'about' }">Conocenos</nuxt-link>
         </li>
-        <li class="navbar__list__item">
-            <nuxt-link :to="{ name: 'products' }" data-text="Productos" >Productos</nuxt-link>
+        <li class="navbar__list__item" @click="$emit('close')">
+            <nuxt-link :to="{ name: 'products' }">Productos</nuxt-link>
         </li>
-        <li class="navbar__list__item">
-            <nuxt-link :to="{ name: 'contact' }" data-text="Contacto">Contacto</nuxt-link>
+        <li class="navbar__list__item" @click="$emit('close')">
+            <nuxt-link :to="{ name: 'contact' }">Contacto</nuxt-link>
         </li>
     </ul>
     <b-icon 
@@ -30,8 +30,6 @@ export default defineComponent({
             type: Boolean,
             required:true
         }
-    },
-    setup() {
     }
 })
 </script>

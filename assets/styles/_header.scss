@@ -215,16 +215,6 @@ $bg: #fff;
                         transition: letter-spacing 0.5s, left 0.5s;
                     }
 
-                    &:hover:before {
-                        content: attr(data-text);
-                        opacity: 1;
-                        left: 50%;
-                        letter-spacing: 10px;
-                        width: 100px;
-                        height: 100px;
-                        z-index: -1;
-                    }
-
                 }
 
                 &:hover a {
