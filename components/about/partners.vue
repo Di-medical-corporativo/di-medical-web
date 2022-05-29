@@ -3,8 +3,8 @@
         <h1 class="partners__title" data-aos="fade-left">Socios comerciales: </h1>
         <div class="partners__list">
             <img class="parterns__list__logos" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2Flogos_1.png?alt=media&token=04400382-d0bb-429d-b8fd-79de71e12f92" alt="partners list logos">
-            <img class="parterns__list__logos" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2Flogos_1.png?alt=media&token=04400382-d0bb-429d-b8fd-79de71e12f92" alt="partners list logos">
-            <img class="parterns__list__logos" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2Flogos_1.png?alt=media&token=04400382-d0bb-429d-b8fd-79de71e12f92" alt="partners list logos">
+            <img class="parterns__list__logos partner_left" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2Flogos_2.png?alt=media&token=32281504-599d-4d63-93ab-efc081cc31d6" alt="partners list logos">
+            <img class="parterns__list__logos" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2Flogos_4.jpg?alt=media&token=afd53b68-fe17-4b4f-a35b-d055f4287735" alt="partners list logos">
         </div>
 
         <svg  class="wave__up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

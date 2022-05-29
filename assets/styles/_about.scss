@@ -2,12 +2,39 @@
     width: 100%;
     height: 100%;
 
-    @keyframes move_logos {
+    @keyframes move_logos_mobile {
         from { 
-            transform: translateX(-300px);
+            transform: translateX(-290px);
         }
         to { 
-            transform: translateX(300px);
+            transform: translateX(290px);
+        }
+    }
+
+    @keyframes move_logos_right_mobile {
+        from { 
+            transform: translateX(290px);
+        }
+        to { 
+            transform: translateX(-290px);
+        }
+    }
+
+    @keyframes move_logos {
+        from { 
+            transform: translateX(-900px);
+        }
+        to {
+            transform: translateX(900px);
+        }
+    }
+
+    @keyframes move_logos_right {
+        from { 
+            transform: translateX(900px);
+        }
+        to { 
+            transform: translateX(-900px);
         }
     }
 
@@ -439,12 +466,12 @@
         position: relative;
 
         @include medium_device-up {
-            height: 700px;
+            height: 750px;
         }
 
         .partners__title {
             @include h1;
-            margin-top: 30px;
+            margin-top: 50px;
         }
 
         .partners__list {
@@ -454,10 +481,31 @@
             @include flex(center, space-evenly, column);
             .parterns__list__logos {
                 width: 200vw;
-                animation: move_logos 10s infinite alternate ease;
+                animation: move_logos_mobile 12s infinite alternate ease;
                 
                 @include small_device-up {
-                    width: 70%;
+                    width: 600px;
+                    animation: none;
+                    animation: move_logos 12s infinite alternate ease;
+                }
+
+                @include medium_device-up { 
+                    width: 750px;
+                    animation: none;
+                }
+
+                @include large_device-up {
+                    width: 900px;
+                }
+            }
+
+            .partner_left {
+                animation: move_logos_right_mobile 12s infinite alternate ease;
+                @include small_device-up {
+                    animation: move_logos_right 12s infinite alternate ease;
+                }
+
+                @include medium_device-up { 
                     animation: none;
                 }
             }
