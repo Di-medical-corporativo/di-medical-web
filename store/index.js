@@ -10,5 +10,4 @@ export default {
     products: productsStore
   }
 }
-
-hoasjdflkjslfkjsflskflksdlksdjljdslkfjlkfjsflkoermla,sm.,msdfkjlkj
+hola soy kevin aron tapia cruz
