@@ -11,3 +11,5 @@ export const getProductTitleById = state => id => {
     console.log(state.products, id);
     return state.products.filter(product => product.title.toLowerCase() === name).title
 }
+
+export const getLoading = state => state.isLoading

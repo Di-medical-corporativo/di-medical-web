@@ -1,3 +1,3 @@
-export const getStories = state => {
-    return state.stories
-}
+export const getStories = state => state.stories
+
+export const getLoading = state => state.isLoading

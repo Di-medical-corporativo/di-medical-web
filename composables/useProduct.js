@@ -1,19 +1,12 @@
 import { useStore, computed, ref } from '@nuxtjs/composition-api'
 const useProduct = () => {
     const store = useStore()
-    const loading = ref(false)
+    const loading = computed(() => store.getters['products/getLoading'])
     const products = computed(() => store.getters['products/getProducts'])
 
     const getProducts = async () => {
         try {
-
-            if(store.getters['products/getProducts'].length > 0) {
-                return;
-            }
-
-            loading.value = true
             await store.dispatch('products/getProducts')
-            loading.value = false
         } catch (error) {
             return {
                 ok: false
@@ -49,7 +42,7 @@ const useProduct = () => {
         }
     }    
     
-    const limitResults = (limit = 3) => {
+    const limitProductsResults = (limit = 3) => {
         return store.getters['products/getProducts'].slice(0, 3)
     }
 
@@ -58,7 +51,7 @@ const useProduct = () => {
         products,
         loading,
         getProductById,
-        limitResults,
+        limitProductsResults,
         getProductByName,
         getRecommendedProducts
     }

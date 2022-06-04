@@ -2,20 +2,23 @@ import { database } from '../../firebase/firebase'
 import { child, get, ref } from 'firebase/database';
 
 export const getProducts = async ({ commit }) => {
+    commit('setLoading', true);
     try {
-        const r = ref(database)
-        const res =( await get(child(r, 'products')) ).val()
-        const products = [];
-        for (let id of Object.keys(res)) {
-            products.push({
+        const databaseRef = ref(database)
+        const productsResponse =( await get(child(databaseRef, 'products')) ).val()
+        const productsList = [];
+        for (let id of Object.keys(productsResponse)) {
+            productsList.push({
             id,
-            ...res[id],
+            ...productsResponse[id],
           });
         }
-        commit('setProducts', products )
+        commit('setProducts', productsList )
       } catch (e) {
         commit('setProducts', [] )
     }
+
+    commit('setLoading', false);
 }
 
 export const getProductByName = async (_, name) => {

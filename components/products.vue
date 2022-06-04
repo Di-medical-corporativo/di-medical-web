@@ -34,15 +34,15 @@ export default defineComponent({
     },
     props: {
         position: {
-        type: String,
-        default: () => 'bottom'
-		  }
+            type: String,
+            default: () => 'bottom'
+		}
     },
 
     setup(props) {
-      const { getProducts, limitResults, loading } = useProducts()
+      const { limitProductsResults, loading, getProducts } = useProducts()
       getProducts()
-      const firstThree = computed(() => limitResults(3))
+      const firstThree = computed(() => limitProductsResults(3))
       return { firstThree, loading }
     }
 })
