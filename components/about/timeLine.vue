@@ -30,8 +30,7 @@
         <div class="timeline-content right">
           <h2 :style="{ 'text-align': 'left'}">2012</h2>
           <p>
-            En el año 2012 se fundó Di-medical donde se creo su identidad
-            ,diseñando su nombre y logotipo
+            En el año 2012 se fundó  <strong class="dimedical__word">Di medical</strong> donde se creo su identidad, diseñando su nombre y logotipo
           </p>
         </div>
       </div>
@@ -43,7 +42,7 @@
         <div class="timeline-content">
           <h2 :style="{ 'text-align': 'right' }">2016</h2>
           <p>
-            En el año 2016, se constituyó la empresa Di-medical <br />
+            En el año 2016, se constituyó la empresa <strong class="dimedical__word">Di medical</strong> <br />
             Se crea la alianza con la Marca Salter Labs, haciendonos
             distribuidores directos en Territorio Nacional
           </p>
@@ -56,7 +55,7 @@
         </div>
         <div class="timeline-content right">
           <h2 :style="{ 'text-align': 'left'}">2018</h2>
-          <p>En el año 2018, se constituye la surcursal Di-medical del Sur</p>
+          <p>En el año 2018, se constituye la surcursal <strong class="dimedicaldelsur__word">Di-medical del Sur</strong></p>
         </div>
       </div>
 
@@ -88,7 +87,7 @@
         <div class="timeline-content">
           <h2 :style="{ 'text-align': 'right' }">2020</h2>
           <p>
-            Di-medical del Sur, crea la alianza con la Marca Salter Labs,
+            <strong class="dimedicaldelsur__word">Di-medical del Sur</strong>, crea la alianza con la Marca Salter Labs,
             haciendonos distribuidores directos en Territorio Nacional
           </p>
         </div>
@@ -101,9 +100,9 @@
         <div class="timeline-content right">
           <h2 :style="{ 'text-align': 'left'}">2021</h2>
           <p>
-            En el año 2021 se constituye Dimedical corporativo
+            En el año 2021 se constituye <strong class="dimedical__word">Di medical corporativo</strong>
             <br />
-            Di medical corporativo, crea la alianza con la Marca ResMed , Baño
+            <strong class="dimedical__word">Di medical corporativo</strong>, crea la alianza con la Marca ResMed , Baño
             Facil y Longfian, haciéndonos distribuidores directos en Territorio
             Nacional
           </p>
@@ -117,11 +116,11 @@
         <div class="timeline-content">
           <h2 :style="{ 'text-align': 'right' }">2022</h2>
           <p>
-            En el año 2022 Di medical corporativo crea la alianza con la Marca
+            En el año 2022 <strong class="dimedical__word">Di medical corporativo</strong> crea la alianza con la Marca
             Bicakcilar, haciéndonos distribuidores directos de sus productos en
             Territorio Nacional 
             <br/>
-            Di medical corporativo y Di-medical del Sur
+            <strong class="dimedical__word">Di medical corporativo</strong> y <strong class="dimedicaldelsur__word">Di-medical del Sur</strong>
             cuenta con más 400 clientes satisfechos
           </p>
         </div>

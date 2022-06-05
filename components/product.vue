@@ -12,7 +12,7 @@
         {{shortenName || ''}}
       </b-card-text>
 
-      <button class="card__button" @click="$router.push({ name: 'products-detail-id', params: { id: productTitle } })">Mas informacion</button>
+      <button class="card__button" @click="$router.push({ name: 'products-detail-id', params: { id: productTitle } })">Más información</button>
       <span>
         <b-icon 
         :icon="product.stock? 'check2' : 'x'" 

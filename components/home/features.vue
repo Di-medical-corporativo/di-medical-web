@@ -30,7 +30,7 @@
             <b-icon icon="cart-check"  style="width: 20px; height: 20px;"></b-icon>
           </div>
           <h4 class="feature__title">Disponibilidad de productos</h4>
-          <p class="feature__desc">Contamos con más de 3500 productos de entrega inmediata</p>
+          <p class="feature__desc">Contamos con más de 500,000 productos de entrega inmediata en nuestros almacenes</p>
         </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F8F8F8" fill-opacity="1" d="M0,288L80,293.3C160,299,320,309,480,298.7C640,288,800,256,960,202.7C1120,149,1280,75,1360,37.3L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>

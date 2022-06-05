@@ -25,7 +25,7 @@
                 padding: 20px;
                 border-radius: 5px;
                 background-color: #F8F8F8;
-                @include flex(flex-start, space-around, column);
+                @include flex(center, space-around, column);
                 margin-top: 20px;
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                 // box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
@@ -41,6 +41,7 @@
                     background-color: $bg-dm-corporativo-light;
                     @include flex(center, center, column);
                     color: #fff;
+                    align-self: flex-start;
                 }
 
                 .feature__title {
@@ -51,6 +52,7 @@
                     @include small_device-up {
                         font-size:21px;
                     }
+                    text-align: center;
                 }
 
                 .feature__desc {
@@ -61,6 +63,7 @@
                     @include small_device-up {
                         font-size:17px;
                     }
+                    text-align: justify;
                 }
             }
         }

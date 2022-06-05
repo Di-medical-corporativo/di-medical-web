@@ -69,7 +69,6 @@ export default defineComponent({
         loading.value = false;
         productsRecommended.value = await getRecommendedProducts(p[0].id)
       } catch (error) {
-        console.log(error);
         return router.push({ name: "products" })
       }
       
