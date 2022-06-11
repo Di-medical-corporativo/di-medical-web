@@ -29,7 +29,7 @@ export default defineComponent({
     CardComponent: defineAsyncComponent(() => import('../../components/products/product.vue'))
   },
 
-  setup(props) {
+  setup() {
 
     useMeta(productsMeta)
   
@@ -37,16 +37,16 @@ export default defineComponent({
 
     const term = ref('')
     
-    const getTerm = (t) => {
-      term.value = t
+    const getTerm = (termInput) => {
+      term.value = termInput
     }
 
 
     const productsList = computed(() => {
       if(!term.value) {
         return products.value
-      } else {
-        return products.value.filter(p => 
+      } 
+      return products.value.filter(p => 
           p.title.toLowerCase().includes(term.value.toLocaleLowerCase())
           || 
           p.code.includes(term.value.toLocaleLowerCase())
@@ -54,12 +54,11 @@ export default defineComponent({
           p.brand.toLowerCase().includes(term.value.toLocaleLowerCase())
           ||
           p.description.toLowerCase().includes(term.value.toLocaleLowerCase())
-          )
-      }
+        )
     })
 
-
     getProducts()
+
     return { 
       products,
       loading,

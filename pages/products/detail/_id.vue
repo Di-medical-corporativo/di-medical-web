@@ -1,21 +1,27 @@
 <template>
   <div class="product__detail">
-    <template v-if="!loading">
+    <template v-if="!isLoading">
       <div class="product__detail__main">
         <div class="product__detail__section">
-          <ProductPhotoComponent @showModal="activateModal" :photos="product[0].photos"/>
+          <ProductPhotoComponent 
+            @showModal="activateModal" 
+            :photos="product[0].photos"/>
         </div>
         <div class="product__detail__section">
           <ProductDescComponent :product="product[0]"/>
         </div>
     </div>
     <hr class="product__detail__line">
-    <div class="product__detail__recommendations" v-if="productsRecommended.length > 0">
+    <div class="product__detail__recommendations" v-if="recommendedProducts.length > 0">
       <h3 class="product__detail__recommendations__title">Te podria interesar:</h3>
-      <ProductRecommendationComponent v-for="card in productsRecommended" :key="card.id" :product="card" class="ml-3 product__recommendation"/>
+      <ProductRecommendationComponent 
+        v-for="card in recommendedProducts" 
+        :key="card.id" :product="card" 
+        class="ml-3 product__recommendation"
+        />
     </div>
     <ModalSliderComponent 
-      v-if="!loading"
+      v-if="!isLoading"
       :showModal="showModal" 
       :actualImage="actualModalImageIdx" 
       @closeModal="activateModal"
@@ -48,29 +54,29 @@ export default defineComponent({
         desc: ''
       }
     ])
-    const productsRecommended = ref([])
-    const loading = ref(true)
+    const isLoading = ref(false);
+    const recommendedProducts = ref([])
     const actualModalImageIdx = ref(0);
     const productTitle = route.value.params.id.replace(/-/g, ' ')
 
     const activateModal = (idx) => {
       showModal.value = !showModal.value
-      actualModalImageIdx.value = idx;
+      actualModalImageIdx.value = idx
     }
 
     const getProduct = async () => {
-      try {
-        loading.value = true;
-        const p = await getProductByName(productTitle)
-        if(p.length == 0) {
-          return router.push({ name: "products" })
+        isLoading.value = true
+        try {
+            const productByName = await getProductByName(productTitle)
+            if(productByName.length == 0) {
+            return router.push({ name: "products" })
+            }
+            product.value = productByName;
+            recommendedProducts.value = await getRecommendedProducts(product.value[0].id)
+            isLoading.value = false;
+        } catch (error) {
+            return router.push({ name: "products" })
         }
-        product.value = p;
-        loading.value = false;
-        productsRecommended.value = await getRecommendedProducts(p[0].id)
-      } catch (error) {
-        return router.push({ name: "products" })
-      }
       
     }
 
@@ -92,11 +98,12 @@ export default defineComponent({
       showModal,
       activateModal,
       actualModalImageIdx,
-      loading,
+      isLoading,
       product,
-      productsRecommended
+      recommendedProducts
     }
   },
+
   components: {
     ProductPhotoComponent: defineAsyncComponent(() => import('@/components/products/detail/photo.vue')),
     ProductDescComponent: defineAsyncComponent(() => import('@/components/products/detail/product_desc.vue')),

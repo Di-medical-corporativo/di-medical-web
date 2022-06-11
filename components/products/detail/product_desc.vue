@@ -11,7 +11,6 @@
       <span class="code">Codigo del producto: {{product.code}}</span>
     </div>
     <div class="product__detail__desc__price">
-      <h2>${{product.price}}</h2>
       <span>Compartir producto: </span>
       <div class="sharer">
         <a :href="`https://www.facebook.com/sharer/sharer.php?u=${url}`">
@@ -59,7 +58,6 @@ export default defineComponent({
 
     if(process.client) {
       url.value = window.location.href;
-      console.log(url.value);
     }
 
     const copyUrl = () => {

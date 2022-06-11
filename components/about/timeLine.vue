@@ -121,7 +121,7 @@
             Territorio Nacional 
             <br/>
             <strong class="dimedical__word">Di medical corporativo</strong> y <strong class="dimedicaldelsur__word">Di-medical del Sur</strong>
-            cuenta con más 400 clientes satisfechos
+            cuenta con más 600 clientes satisfechos
           </p>
         </div>
       </div>

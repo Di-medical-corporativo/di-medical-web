@@ -6,6 +6,10 @@ const useProduct = () => {
 
     const getProducts = async () => {
         try {
+            if(products.length >= 0) {
+                console.log('No hace doble peticion');
+                return
+            } 
             await store.dispatch('products/getProducts')
         } catch (error) {
             return {
@@ -20,9 +24,8 @@ const useProduct = () => {
 
     const getProductByName = async (name) => {
         try {
-            loading.value = true
+            
             const productName = await store.dispatch('products/getProductByName', name)
-            loading.value = false
             return productName
         } catch (error) {
             return error
@@ -31,9 +34,7 @@ const useProduct = () => {
 
     const getRecommendedProducts = async (id) => {
         try {
-            loading.value = true
             const products = await store.dispatch('products/getProductsRecommended', id)
-            loading.value = false
             return products
         } catch (error) {
             return {
