@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <HeroImageComponent image="contact" title="Contacto"/>
-	  <FormContactComponent/>
+	<FormContactComponent/>
     <OfficesContactComponent/>
     <FAQComponent/>
   </div>
@@ -16,7 +16,7 @@ export default defineComponent({
   head: {},
   components: {
     HeroImageComponent: defineAsyncComponent(() => import('../../components/heroImage.vue')),
-		FormContactComponent: defineAsyncComponent(() => import('../../components/contact/formContact.vue')),
+	FormContactComponent: defineAsyncComponent(() => import('../../components/contact/formContact.vue')),
     OfficesContactComponent: defineAsyncComponent(() => import('../../components/contact/offices.vue')),
     FAQComponent: defineAsyncComponent(() => import('../../components/contact/QA.vue'))
   },
@@ -25,7 +25,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style>
-
-</style>

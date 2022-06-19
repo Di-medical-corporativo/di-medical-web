@@ -65,10 +65,10 @@ export default defineComponent({
     watch(mainImage, (current, old) => {
       if (process.client) {
         if (current.idx !== old.idx) {
-          const currentThumbnail = document.getElementById(current.idx)
-          const oldThumbnail = document.getElementById(old.idx)
-          currentThumbnail.classList.add("current_thumbnail")
-          oldThumbnail.classList.remove("current_thumbnail")
+            const currentThumbnail = document.getElementById(current.idx)
+            const oldThumbnail = document.getElementById(old.idx)
+            currentThumbnail.classList.add("current_thumbnail")
+            oldThumbnail.classList.remove("current_thumbnail")
         }
       }
     });

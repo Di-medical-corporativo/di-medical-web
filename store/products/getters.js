@@ -1,6 +1,6 @@
 export const getProducts = state => state.products
 
-export const getProductById = state => id => {
+export const getProductByName = state => id => {
     const name = id.replace(/-/g, ' ');
     return state.products.filter(product => product.title.toLowerCase() === name)
 }

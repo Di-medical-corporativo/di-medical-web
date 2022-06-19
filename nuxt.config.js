@@ -43,6 +43,7 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-lazy-load'
   ],
 
   styleResources: {

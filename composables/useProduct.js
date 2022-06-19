@@ -19,14 +19,15 @@ const useProduct = () => {
     }
 
     const getProductById = (id) => {
-        return store.getters['products/getProductById'](id)   
+        return store.getters['products/getProductByName'](id)   
     }
 
     const getProductByName = async (name) => {
         try {
-            
-            const productName = await store.dispatch('products/getProductByName', name)
-            return productName
+            if(products.length > 0) {
+                return store.getters['products/getProductByName'](id)  
+            }
+            return await store.dispatch('products/getProductByName', name)
         } catch (error) {
             return error
         } 
@@ -34,8 +35,10 @@ const useProduct = () => {
 
     const getRecommendedProducts = async (id) => {
         try {
-            const products = await store.dispatch('products/getProductsRecommended', id)
-            return products
+            if(products.length > 0) {
+                return store.getters['products/getProductByName'](id)  
+            }
+            return await store.dispatch('products/getProductsRecommended', id)
         } catch (error) {
             return {
                 ok: false

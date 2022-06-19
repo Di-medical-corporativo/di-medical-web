@@ -1,15 +1,31 @@
 <template>
     <div class="home">
         <HeroImageComponent image="home"/>
-        <FeaturesComponent/>
-        <HexagonBrandsComponent/>
-        <ProductsComponent/>
-        <CounterComponent/>
-        <ContactHeroComponent/>
+        
+        <LazyHydrate when-visible>
+            <FeaturesComponent/>
+        </LazyHydrate>
+        
+        <LazyHydrate when-visible>
+            <HexagonBrandsComponent/>
+        </LazyHydrate>
+
+        <LazyHydrate when-visible>
+            <ProductsComponent/>
+        </LazyHydrate>
+
+        <LazyHydrate when-visible>
+            <CounterComponent/>
+        </LazyHydrate>
+
+        <LazyHydrate when-visible>
+            <ContactHeroComponent/>
+        </LazyHydrate>
     </div>
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
 import { defineComponent, defineAsyncComponent, useMeta } from '@nuxtjs/composition-api'
 import homeMeta from '../metadata/home'
 
@@ -28,12 +44,13 @@ export default defineComponent({
     },
 
     components: {
+        LazyHydrate,
         HeroImageComponent: defineAsyncComponent(() => import('../components/heroImage.vue')),
         HexagonBrandsComponent: defineAsyncComponent(() => import('../components/home/hexagonBrand.vue')),
         ProductsComponent: defineAsyncComponent(() => import('../components/products.vue')),
         FeaturesComponent: defineAsyncComponent(() => import('../components/home/features.vue')),
         CounterComponent: defineAsyncComponent(() => import('../components/counter.vue')),
-        ContactHeroComponent: defineComponent(() => import('../components/home/contactHero.vue'))
+        ContactHeroComponent: defineComponent(() => import('../components/home/contactHero.vue')),
     }
 })
 </script>

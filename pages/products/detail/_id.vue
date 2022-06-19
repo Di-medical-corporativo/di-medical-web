@@ -22,10 +22,10 @@
     </div>
     <ModalSliderComponent 
       v-if="!isLoading"
-      :showModal="showModal" 
-      :actualImage="actualModalImageIdx" 
+      :isDisplayed="showModal" 
+      :actualImageId="actualModalImageIdx" 
       @closeModal="activateModal"
-      :images="product[0].photos"
+      :imageList="product[0].photos"
     />
     </template>
     <ProductLoaderSkeletonComponent v-else/>
@@ -68,8 +68,8 @@ export default defineComponent({
         isLoading.value = true
         try {
             const productByName = await getProductByName(productTitle)
-            if(productByName.length == 0) {
-            return router.push({ name: "products" })
+            if(!productByName) {
+                return router.push({ name: "products" })
             }
             product.value = productByName;
             recommendedProducts.value = await getRecommendedProducts(product.value[0].id)

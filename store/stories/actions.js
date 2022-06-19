@@ -1,7 +1,9 @@
 
 import { database } from '../../firebase/firebase'
 import { child, get, ref } from 'firebase/database';
+
 export const getStories = async({ commit }) => {
+    commit('setLoading', true)
     try {
         const r = ref(database)
         const res =( await get(child(r, 'stories'))).val()
@@ -16,4 +18,5 @@ export const getStories = async({ commit }) => {
       } catch (e) {
         commit('setStories', [] )
     }
+    commit('setLoading', false)
 }
