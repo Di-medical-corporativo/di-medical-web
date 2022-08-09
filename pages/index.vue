@@ -32,13 +32,6 @@ import homeMeta from '../metadata/home'
 export default defineComponent({
     head: {},
     layout: 'main',
-    // setup(_ ,{ root, nuxt }) {
-    //     root.$nextTick(() => {
-    //         root.$nuxt.$loading.start()
-    //         setTimeout(() => root.$nuxt.$loading.finish(), 500)
-    //     })
-    // },
-
     setup(props) {
         useMeta(homeMeta)
     },
