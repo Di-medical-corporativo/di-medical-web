@@ -7,7 +7,7 @@ const useProduct = () => {
     const getProducts = async () => {
         try {
             if(products.length >= 0) {
-                console.log('No hace doble peticion');
+                console.log('No hace doble peticion little update');
                 return
             } 
             await store.dispatch('products/getProducts')
