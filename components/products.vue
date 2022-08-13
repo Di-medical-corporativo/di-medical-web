@@ -29,7 +29,7 @@ import { defineComponent, defineAsyncComponent, computed } from '@nuxtjs/composi
 import useProducts from '../composables/useProduct'
 export default defineComponent({
     components: {
-        ProductComponent: defineAsyncComponent(() => import('./product.vue')),
+        ProductComponent: defineAsyncComponent(() => import('./products/product.vue')),
         hexagonDecorationComponent: defineAsyncComponent(() => import('./hexagonDecoration.vue'))
     },
     props: {

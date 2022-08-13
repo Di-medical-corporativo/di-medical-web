@@ -2,13 +2,6 @@
 
 exports[`modal slider from product detail should match snapshot 1`] = `
 "<div class=\\"modal__slider\\" style=\\"top: -100vh;\\">
-  <div class=\\"slider\\">
-    <div class=\\"slider__close\\">
-      <b-icon icon=\\"x\\" class=\\"icon\\"></b-icon>
-    </div>
-    <div class=\\"slider__main\\"><img alt=\\"Product image\\" class=\\"slider__full\\"></div>
-    <!---->
-    <!---->
-  </div>
+  <!---->
 </div>"
 `;

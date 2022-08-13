@@ -18,16 +18,12 @@ const useProduct = () => {
         }
     }
 
-    const getProductById = (id) => {
-        return store.getters['products/getProductByName'](id)   
-    }
-
-    const getProductByName = async (name) => {
+    const getProductById = async (id) => {
         try {
             if(products.length > 0) {
                 return store.getters['products/getProductByName'](id)  
             }
-            return await store.dispatch('products/getProductByName', name)
+            return await store.dispatch('products/getProductByName', id)
         } catch (error) {
             return error
         } 
@@ -47,7 +43,7 @@ const useProduct = () => {
     }    
     
     const limitProductsResults = (limit = 3) => {
-        return store.getters['products/getProducts'].slice(0, 3)
+        return store.getters['products/getProducts'].slice(0, limit)
     }
 
     return {
@@ -56,7 +52,6 @@ const useProduct = () => {
         loading,
         getProductById,
         limitProductsResults,
-        getProductByName,
         getRecommendedProducts
     }
 }
