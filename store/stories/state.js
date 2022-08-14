@@ -1,4 +1,4 @@
 export default () => ({
-  stories: [],
-  isLoading: false,
+    stories: [],
+    isLoading: false,
 })

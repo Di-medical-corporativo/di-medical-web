@@ -1,4 +1,4 @@
 export default () => ({
-  products: [],
-  isLoading: false 
+    products: [],
+    isLoading: false
 })
