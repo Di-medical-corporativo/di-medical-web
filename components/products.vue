@@ -67,10 +67,10 @@ import {
 import useProducts from "../composables/useProduct";
 export default defineComponent({
   components: {
-    ProductComponent: defineAsyncComponent(() =>
+    ProductComponent: defineComponent(() =>
       import("./products/product.vue")
     ),
-    hexagonDecorationComponent: defineAsyncComponent(() =>
+    hexagonDecorationComponent: defineComponent(() =>
       import("./hexagonDecoration.vue")
     ),
   },

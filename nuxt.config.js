@@ -43,7 +43,7 @@ module.exports = {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-    // https://go.nuxtjs.dev/axios
+    // https://go.nuxtjs.dev/axios,
     '@nuxtjs/axios',
     'nuxt-lazy-load'
   ],

@@ -140,19 +140,19 @@ export default defineComponent({
   },
 
   components: {
-    ProductPhotoComponent: defineAsyncComponent(() =>
+    ProductPhotoComponent: defineComponent(() =>
       import("@/components/products/detail/photo.vue")
     ),
-    ProductDescComponent: defineAsyncComponent(() =>
+    ProductDescComponent: defineComponent(() =>
       import("~/components/products/detail/productDesc.vue")
     ),
-    ProductRecommendationComponent: defineAsyncComponent(() =>
+    ProductRecommendationComponent: defineComponent(() =>
       import("@/components/products/product.vue")
     ),
-    ModalSliderComponent: defineAsyncComponent(() =>
+    ModalSliderComponent: defineComponent(() =>
       import("@/components/products/detail/modalSlider.vue")
     ),
-    ProductLoaderSkeletonComponent: defineAsyncComponent(() =>
+    ProductLoaderSkeletonComponent: defineComponent(() =>
       import("@/components/products/detail/loaderProduct.vue")
     ),
   },

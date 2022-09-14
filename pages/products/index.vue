@@ -36,13 +36,13 @@ export default defineComponent({
   layout: "productDetail",
   head: {},
   components: {
-    BannerComponent: defineAsyncComponent(() =>
+    BannerComponent: defineComponent(() =>
       import("../../components/products/banner.vue")
     ),
-    SearchComponent: defineAsyncComponent(() =>
+    SearchComponent: defineComponent(() =>
       import("../../components/products/search.vue")
     ),
-    CardComponent: defineAsyncComponent(() =>
+    CardComponent: defineComponent(() =>
       import("../../components/products/product.vue")
     ),
     LazyHydrate,

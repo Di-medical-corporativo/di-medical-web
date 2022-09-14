@@ -13,9 +13,9 @@
 import { defineComponent, defineAsyncComponent } from '@vue/composition-api'
 export default defineComponent({
     components: {
-        HeaderComponent: defineAsyncComponent(() => import('../components/header/index.vue')),
-        FooterComponent: defineAsyncComponent(() => import('../components/footer/index.vue')),        
-        UpComponent: defineAsyncComponent(() => import('../components/toUp.vue'))
+        HeaderComponent: defineComponent(() => import('../components/header/index.vue')),
+        FooterComponent: defineComponent(() => import('../components/footer/index.vue')),        
+        UpComponent: defineComponent(() => import('../components/toUp.vue'))
     
     }
 })

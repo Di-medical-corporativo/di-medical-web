@@ -17,7 +17,7 @@ import { defineAsyncComponent, defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   components: {
-    hexagonDecorationComponent: defineAsyncComponent(() => import('../hexagonDecoration.vue'))
+    hexagonDecorationComponent: defineComponent(() => import('../hexagonDecoration.vue'))
   }
 })
 </script>

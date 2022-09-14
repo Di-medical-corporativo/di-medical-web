@@ -38,11 +38,11 @@ export default defineComponent({
 
     components: {
         LazyHydrate,
-        HeroImageComponent: defineAsyncComponent(() => import('../components/heroImage.vue')),
-        HexagonBrandsComponent: defineAsyncComponent(() => import('../components/home/hexagonBrand.vue')),
-        ProductsComponent: defineAsyncComponent(() => import('../components/products.vue')),
-        FeaturesComponent: defineAsyncComponent(() => import('../components/home/features.vue')),
-        CounterComponent: defineAsyncComponent(() => import('../components/counter.vue')),
+        HeroImageComponent: defineComponent(() => import('../components/heroImage.vue')),
+        HexagonBrandsComponent: defineComponent(() => import('../components/home/hexagonBrand.vue')),
+        ProductsComponent: defineComponent(() => import('../components/products.vue')),
+        FeaturesComponent: defineComponent(() => import('../components/home/features.vue')),
+        CounterComponent: defineComponent(() => import('../components/counter.vue')),
         ContactHeroComponent: defineComponent(() => import('../components/home/contactHero.vue')),
     }
 })

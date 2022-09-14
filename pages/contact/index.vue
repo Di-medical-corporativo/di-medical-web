@@ -29,10 +29,10 @@ export default defineComponent({
   head: {},
   components: {
     LazyHydrate,
-    HeroImageComponent: defineAsyncComponent(() => import('../../components/heroImage.vue')),
-	FormContactComponent: defineAsyncComponent(() => import('../../components/contact/formContact.vue')),
-    OfficesContactComponent: defineAsyncComponent(() => import('../../components/contact/offices.vue')),
-    FAQComponent: defineAsyncComponent(() => import('../../components/contact/QA.vue'))
+    HeroImageComponent: defineComponent(() => import('../../components/heroImage.vue')),
+	FormContactComponent: defineComponent(() => import('../../components/contact/formContact.vue')),
+    OfficesContactComponent: defineComponent(() => import('../../components/contact/offices.vue')),
+    FAQComponent: defineComponent(() => import('../../components/contact/QA.vue'))
   },
   setup(props) {
     useMeta(contactMeta)
