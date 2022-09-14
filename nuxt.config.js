@@ -1,6 +1,5 @@
-export default {
+module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'static',
   head: {
     title: 'dimedical-page',
     htmlAttrs: {
@@ -12,6 +11,9 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
+
+
+    
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/logoCorporativo.ico' }
     ]
