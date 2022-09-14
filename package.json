@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/composition-api": "^0.33.1",
+    "@nuxtjs/composition-api": "^0.33.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@vue/composition-api": "^1.7.0",
     "aos": "^3.0.0-beta.6",

@@ -45,9 +45,8 @@ import {
   useRoute,
   useRouter,
   useMeta,
+  ref
 } from "@nuxtjs/composition-api";
-import { defineAsyncComponent, ref } from "@vue/composition-api";
-
 import useProduct from "@/composables/useProduct";
 
 export default defineComponent({
