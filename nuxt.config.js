@@ -17,11 +17,13 @@ module.exports = {
       { hid: 'og-description', name: 'og:description', content: 'Di-medical corporativo, empresa mexicana dedicada a la importación y distribución de equipo médico y material de curación.' },
       { hid: 'og-image', name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2FlogoCorporativo.png?alt=media&token=ca32a756-7656-4259-b5b7-921c11a0a3e8' }
     ],
-
-
     
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/logoCorporativo.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logoCorporativo.ico' },
+      {
+        rel: 'canonical',
+        href: 'https://www.dimedicalcorporativo.mx/'
+      }
     ]
   },
 
@@ -53,7 +55,6 @@ module.exports = {
     '@nuxtjs/axios',
     'nuxt-lazy-load',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
   ],
 
   sitemap: {
@@ -85,12 +86,6 @@ module.exports = {
             lastmod: '2022-10-31T13:30:00.000Z'
         },
     ]
-  },
-
-  robots: {
-    UserAgent: '*',
-    Allow: '/',
-    Sitemap: 'https://dimedicalcorporativo.mx/sitemap.xml'
   },
 
   styleResources: {
