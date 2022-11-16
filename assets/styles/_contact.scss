@@ -135,7 +135,7 @@
                 z-index: 2;
                 box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
                 border-radius: 10px;
-                @include flex(center, center, column);
+                @include flex(center, space-between, column);
                 @include medium_device-up {
                     width: 300px;
                 }
@@ -155,15 +155,15 @@
                     margin-top: 30px;
                 }
 
-                // .office__map {
-                //     width: 100%;
-                //     @include flex(center, center, column);
-                //     .map {
-                //         width: 100%;
-                //         border-radius: 10px;
-                //         height: 280px;
-                //     }
-                // }
+                .office__map {
+                    width: 100%;
+                    @include flex(center, center, column);
+                    .map {
+                        width: 100%;
+                        border-radius: 10px;
+                        height: 280px;
+                    }
+                }
             }
         }
     }
