@@ -1,28 +1,28 @@
 <template>
   <div class="modal__slider" @click.self="closeModal" :style="showModalStyle">
-    <div class="slider" v-if="show">
+    <div class="slider" v-if="isShown">
         <div class="slider__close" @click="closeModal">
           <b-icon icon="x" class="icon"></b-icon>
         </div>
-        <div class="slider__main" v-if="images.length > 0">
+        <div class="slider__main" v-if="imageList.length > 0">
           <video 
             autoplay
             muted
-            v-if="images[counterImage].includes('mp4')" 
+            v-if="imageList[counterImage].includes('mp4')" 
             class="slider__full video"
             controls
           >
-          <source :src="images[counterImage]" type="video/mp4"/>
+          <source :src="imageList[counterImage]" type="video/mp4"/>
         </video>
 
-          <img v-else class="slider__full" :src="images[counterImage]" alt="Product image">
+          <img v-else class="slider__full" :src="imageList[counterImage]" alt="Product image">
         </div>
 
         <div class="slider__left__arrow" @click="counterImage--" v-if="counterImage > 0">
           <b-icon icon="arrow-left" class="icon"></b-icon>
         </div>
 
-        <div class="slider__right__arrow" @click="counterImage++" v-if="counterImage < images.length - 1">
+        <div class="slider__right__arrow" @click="counterImage++" v-if="counterImage < imageList.length - 1">
           <b-icon icon="arrow-right" class="icon"></b-icon>
         </div>
 
@@ -35,34 +35,35 @@ import { computed, defineComponent, ref, toRefs, watch } from "@nuxtjs/compositi
 
 export default defineComponent({
     props: {
-        showModal: {
+        isDisplayed: {
             type: Boolean
         },
-        actualImage: {
+        actualImageId: {
           type: Number
         },
-        images: {
+        imageList: {
           type: Array
         }
     },
     setup(props, { emit }) {
-      let show = toRefs(props).showModal
+      let isShown = toRefs(props).isDisplayed
       let counterImage = ref(0)
-      counterImage.value = props.actualImage
+      counterImage.value = props.actualImageId
+
       const showModalStyle = computed(() => {
-        return { 'top': !show.value ? '-100vh' : '0'  }
+        return { 'top': !isShown.value ? '-100vh' : '0'  }
       })
 
       const closeModal = () => {
         emit('closeModal')
       }
 
-      watch(toRefs(props).actualImage, () => {
-        counterImage.value = props.actualImage
+      watch(toRefs(props).actualImageId, () => {
+        counterImage.value = props.actualImageId
       })
       return {
         closeModal,
-        show,
+        isShown,
         counterImage,
         showModalStyle,
       }

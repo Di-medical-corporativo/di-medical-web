@@ -5,43 +5,40 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <script>
 export default {
-    name:"ToUp",
-    data(){
-        return{
+  name: "ToUp",
+  data() {
+    return {};
+  },
+  methods: {
+    handleScroll() {
+      if (process.client) {
+        let up = document.querySelector(".up");
+        if (document.documentElement.scrollTop > 100) {
+          up.style.display = "flex";
+        } else {
+          up.style.display = "none";
         }
+      }
     },
-    methods: {
-        handleScroll(){
-            if(process.client) {
-                let up = document.querySelector(".up")
-            if(document.documentElement.scrollTop > 100){
-                up.style.display = "flex"
-            } else {
-                up.style.display = "none"
-            }
-            }
-        },
-        up(){
-            if(process.client){
-                window.scrollTo({
-                    top:0,
-                    behavior: "smooth"
-                })
-            }
-        }
+    up() {
+      if (process.client) {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
     },
-    created(){
-        if(process.client) window.addEventListener("scroll", this.handleScroll)
-    },
-     destroyed (){
-         if(process.client) window.removeEventListener("scroll", this.handleScroll)
-     }
-}
+  },
+  created() {
+    if (process.client) window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    if (process.client) window.removeEventListener("scroll", this.handleScroll);
+  },
+};
 </script>

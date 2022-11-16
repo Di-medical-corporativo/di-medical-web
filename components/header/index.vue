@@ -45,7 +45,7 @@ export default defineComponent({
         }
     },
     components: {
-        NavBarComponent: defineAsyncComponent(() => import('./navBar.vue'))
+        NavBarComponent: defineComponent(() => import('./navBar.vue'))
     }
 })
 </script>

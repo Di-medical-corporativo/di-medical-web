@@ -32,15 +32,15 @@ describe('Vuex: products', () => {
         expect(store.getters['getProducts'].length).toBe(productState.products.length)
     })
 
-    test('getters: getProductById ', () => {
+    test('getters: getProductByName ', () => {
         const { store } = createVuexStore(productState)
-        expect(store.getters['getProductById']('producto-2')).toEqual([productState.products[1]])
+        expect(store.getters['getProductByName']('producto-2')).toEqual([productState.products[1]])
     })
 
     test('actions: getProducts ', async () => {
         const { store } = createVuexStore({ products: [] })
         await store.dispatch('getProducts')
         const { products } = store.state
-        expect(products.length).toBe(2)
+        expect(products).toBeDefined()
     })
 })

@@ -65,7 +65,7 @@ export default defineComponent({
   },
 
   components: {
-    ModalSliderComponent: defineAsyncComponent(() => import('./modalStories.vue'))
+    ModalSliderComponent: defineComponent(() => import('./modalStories.vue'))
   }
 })
 </script>

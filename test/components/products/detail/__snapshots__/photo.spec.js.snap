@@ -2,16 +2,15 @@
 
 exports[`photo detail component should match with snapshot 1`] = `
 "<div class=\\"product__detail__photo\\">
-  <div class=\\"product__detail__photo__main\\" style=\\"background-image: url(https://media.istockphoto.com/photos/pair-of-stylish-sneakers-isolated-on-white-background-white-casual-picture-id1248566148?k=20&amp;m=1248566148&amp;s=170667a&amp;w=0&amp;h=Lom1xUV8pfz2kFmzepcEzn52mlEzWj5d2TMDFKlhOsc=);\\">
+  <div class=\\"product__detail__photo__main\\"><img src=\\"https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/products%2F38c2b377-7422-49e9-a5f8-42d493bde14e%2F7c077cc9-2fce-48b0-acff-5f6a99c310a8-product.jpg?alt=media&amp;token=5068c62d-a816-4efe-bb48-843d77c4c2e2\\" class=\\"photo__main\\">
     <div class=\\"product__detail__full_size\\">
       <b-icon icon=\\"arrows-fullscreen\\" class=\\"fullscreen__icon\\"></b-icon>
     </div>
   </div>
   <div class=\\"product__detail__photo__list\\">
-    <div id=\\"0\\" class=\\"product__detail__photo__thumbnail current_thumbnail\\" style=\\"background-image: url(https://media.istockphoto.com/photos/pair-of-stylish-sneakers-isolated-on-white-background-white-casual-picture-id1248566148?k=20&amp;m=1248566148&amp;s=170667a&amp;w=0&amp;h=Lom1xUV8pfz2kFmzepcEzn52mlEzWj5d2TMDFKlhOsc=);\\"></div>
-    <div id=\\"1\\" class=\\"product__detail__photo__thumbnail\\" style=\\"background-image: url(https://flexi.shoes/blog/wp-content/uploads/sites/7/2018/06/sneaker-clasico-blanco.png);\\"></div>
-    <div id=\\"2\\" class=\\"product__detail__photo__thumbnail\\" style=\\"background-image: url(https://rukminim2.flixcart.com/image/714/857/jcrz6vk0/shoe/g/w/t/ds-1503-10-d-sneakerz-white-original-imafftryhbku8nus.jpeg?q=50);\\"></div>
-    <div id=\\"3\\" class=\\"product__detail__photo__thumbnail\\" style=\\"background-image: url(https://media.istockphoto.com/photos/one-white-sneaker-and-floating-rope-isolated-on-white-background-with-picture-id1040446784?k=20&amp;m=1040446784&amp;s=612x612&amp;w=0&amp;h=SM0ccxM_Xwua8xFc0YsB4gCTjm4_KpDeE1ppd8TewBM=);\\"></div>
+    <div id=\\"0\\" class=\\"image__thumb__container\\"><img src=\\"https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/products%2F38c2b377-7422-49e9-a5f8-42d493bde14e%2F7c077cc9-2fce-48b0-acff-5f6a99c310a8-product.jpg?alt=media&amp;token=5068c62d-a816-4efe-bb48-843d77c4c2e2\\" class=\\"product__detail__photo__thumbnail\\"></div>
+    <div id=\\"1\\" class=\\"image__thumb__container\\"><img src=\\"https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/products%2F38c2b377-7422-49e9-a5f8-42d493bde14e%2F32096c21-eaf2-4527-844c-8470128193b7-product.jpg?alt=media&amp;token=413a48e7-8bca-4d38-ab74-479caeabebfb\\" class=\\"product__detail__photo__thumbnail\\"></div>
+    <div id=\\"2\\" class=\\"image__thumb__container\\"><img src=\\"https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/products%2F38c2b377-7422-49e9-a5f8-42d493bde14e%2Fc98f95c7-ed15-4b35-8c6d-051a2ed42879-product.jpg?alt=media&amp;token=99f1772e-7e60-41da-9f80-2ebf9c228ba3\\" class=\\"product__detail__photo__thumbnail\\"></div>
   </div>
 </div>"
 `;

@@ -4,26 +4,23 @@
         <StoriesComponent/>
         <Nuxt/>
         <UpComponent/>
-
         <FooterComponent/>
     </div>
 </template>
 
 <script>
-import { defineComponent, defineAsyncComponent, onMounted } from '@vue/composition-api'
+import { defineComponent, defineAsyncComponent, onMounted } from '@nuxtjs/composition-api'
 export default defineComponent({
     components: {
-        HeaderComponent: defineAsyncComponent(() => import('../components/header/index.vue')),
-        FooterComponent: defineAsyncComponent(() => import('../components/footer/index.vue')),
-        StoriesComponent: defineAsyncComponent(() => import('../components/stories/index.vue')),
-        UpComponent: defineAsyncComponent(() => import('../components/toUp.vue'))
+        HeaderComponent: defineComponent(() => import('../components/header/index.vue')),
+        FooterComponent: defineComponent(() => import('../components/footer/index.vue')),
+        StoriesComponent: defineComponent(() => import('../components/stories/index.vue')),
+        UpComponent: defineComponent(() => import('../components/toUp.vue'))
     
     },
-
-    setup(_, { root }) {
-        onMounted(() => {
-            if(process.client && !sessionStorage.getItem('cookiesStatement')) {
-                root.$bvToast.toast(`Utilizamos cookies propias y de terceros para mejorar nuestro servicio. 
+    mounted() {
+        if(process.client && !sessionStorage.getItem('cookiesStatement')) {
+                this.$bvToast.toast(`Utilizamos cookies propias y de terceros para mejorar nuestro servicio. 
                 Si continúa con la navegación, consideramos que acepta este uso.`, {
                 title: `Cookies`,
                 id: '1',
@@ -32,11 +29,10 @@ export default defineComponent({
                 solid: true,
                 appendToast: true
             })
-            }
+        }
             if(process.client) {
                 sessionStorage.setItem('cookiesStatement', 1)
             }
-        })
-    }
+    },
 })
 </script>
