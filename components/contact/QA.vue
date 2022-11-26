@@ -49,7 +49,7 @@
           role="tabpanel"
         >
           <b-card-body>
-            <b-card-text>Tenemos pagos con tarjeta y transferencia electrónica. A nuestros clientes frecuentes y que cumplen con algunos requisitos ofertamos créditos.</b-card-text>
+            <b-card-text>Aceptamos pagos con tarjeta y transferencia electrónica. A nuestros clientes frecuentes y que cumplen con algunos requisitos ofertamos créditos.</b-card-text>
           </b-card-body>
         </b-collapse>
       </b-card>

@@ -25,12 +25,22 @@
     <div class="hexagons__down">
       <div class="hexagon__wrap">
         <div class="hexagon">
-          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2FBicakcilar.png?alt=media&token=45cc4a25-2890-4304-9db5-cf81266bd13f" alt="Bicakcilar logo" srcset="" />
+          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2FBicakcilar.png?alt=media&token=45cc4a25-2890-4304-9db5-cf81266bd13f" alt="Bicakcilar" srcset="" />
         </div>
       </div>
       <div class="hexagon__wrap">
         <div class="hexagon">
-          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2FLongfian.png?alt=media&token=ee80f615-a299-4a0d-91b4-3ce968c5d303" alt="Long Fian logo" srcset="" />
+          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2FLongfian.png?alt=media&token=ee80f615-a299-4a0d-91b4-3ce968c5d303" alt="Long Fian" srcset="" />
+        </div>
+      </div>
+      <div class="hexagon__wrap">
+        <div class="hexagon">
+          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2FsunmedLogo.png?alt=media&token=fa762af9-ed63-4fc2-a41b-a218d1aecf91" alt="Geotek" srcset="" />
+        </div>
+      </div>
+      <div class="hexagon__wrap">
+        <div class="hexagon">
+          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2FlexelLogo.png?alt=media&token=7e446798-d40a-46a1-b5d2-95b3b679eda9" alt="Lexel" srcset="" />
         </div>
       </div>
     </div>
@@ -40,7 +50,7 @@
 </template>
 
 <script>
-import { defineComponent, defineAsyncComponent } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   components: {

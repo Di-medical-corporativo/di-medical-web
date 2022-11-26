@@ -24,7 +24,8 @@
                 height: 300px;
                 padding: 20px;
                 border-radius: 5px;
-                background-color: #F8F8F8;
+                background: rgba(233, 233, 233, 0.471);
+                backdrop-filter: saturate(180%) blur(10px);
                 @include flex(center, space-around, column);
                 margin-top: 20px;
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
