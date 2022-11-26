@@ -9,8 +9,8 @@
       <div class="title">Clientes</div>
     </div>
     <div class="counter__value">
-      <div class="value">5</div>
-      <div class="title">Marcas de prestigio internacional</div>
+      <div class="value">7</div>
+      <div class="title">Marcas con prestigio internacional</div>
     </div>
   </div>
 </template>

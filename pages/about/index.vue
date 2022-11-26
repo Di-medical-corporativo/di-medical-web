@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <LazyHydrate>
-        <HeroImageComponent image="about" title="Conocenos"/>
+        <HeroImageComponent image="about" title="Sobre nosotros"/>
     </LazyHydrate>
 
     <LazyHydrate when-visible>
