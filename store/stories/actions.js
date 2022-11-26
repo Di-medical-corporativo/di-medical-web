@@ -1,6 +1,6 @@
 
 import { database } from '../../firebase/firebase'
-import { get, limitToLast, orderByKey, query, ref } from 'firebase/database';
+import { get, limitToLast, orderByChild, orderByKey, query, ref } from 'firebase/database';
 import { orderStoriesByDate } from '~/helpers/orderByDate';
 
 export const getStories = async ({ commit }) => {
@@ -17,7 +17,6 @@ export const getStories = async ({ commit }) => {
             });
         }
         const sortedStories = orderStoriesByDate(stories)
-        console.log(sortedStories)
         commit('setStories', sortedStories)
     } catch (e) {
         commit('setStories', [])
