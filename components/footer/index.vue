@@ -3,7 +3,15 @@
     <div class="footer__content">
       <div class="footer__section">
         <h5 class="adress__title">Sucursal CDMX</h5>
+        <small>
+            Avenida 5 de mayo MZ.23, LT. 1, Col. Francisco Villa <br>
+            C.P. 09720, Alcaldia Iztapalapa, Ciudad de Mexico.
+         </small>
         <h5 class="adress__title">Sucursal Monterrey</h5>
+        <small>
+            Avenida Palmas 5061-6, Condocasa Cumbres, <br>
+            Monterrey, Nuevo León C.P 64366
+        </small>
       </div>
       <div class="dimedical-logos">
         <img
