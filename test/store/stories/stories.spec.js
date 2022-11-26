@@ -37,6 +37,7 @@ describe('Vuex: stories', () => {
         const { store } = createVuexStore({ stories: [] })
         await store.dispatch('getStories')
         const { stories, isLoading } = store.state
+        console.log(stories)
         expect(stories).toBeDefined()
         expect(isLoading).toBeFalsy()
     })
