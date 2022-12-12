@@ -21,6 +21,18 @@
           <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2FBan%CC%83o%20Facil.png?alt=media&token=ad1ea014-7449-48df-9c95-179e416fb8d4" alt="Baño Fácil logo" srcset="" />
         </div>
       </div>
+
+      <div class="hexagon__wrap">
+        <div class="hexagon">
+          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2Fgeotek.png?alt=media&token=d9079211-990c-4922-a378-3901289053a0" alt="Geotek" srcset="" />
+        </div>
+      </div>
+
+      <div class="hexagon__wrap">
+        <div class="hexagon">
+          <img data-aos="zoom-in" class="hexagon__img" src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Flogos%2Ffeellife.png?alt=media&token=b594b297-d1dc-4d61-82b6-193a0ab15fe7" alt="FeelLife logo" srcset="" />
+        </div>
+      </div>
     </div>
     <div class="hexagons__down">
       <div class="hexagon__wrap">

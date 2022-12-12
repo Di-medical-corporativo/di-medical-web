@@ -116,7 +116,7 @@
             }
 
             .hexagon__wrap:nth-child(4) {
-                align-self: flex-end;
+                align-self: flex-end !important;
 
             }
         }
@@ -156,8 +156,13 @@
                 align-self: flex-end;
             }
 
+            .hexagon__wrap:nth-child(4) {
+                align-self: flex-start;
+            }
 
-
+            .hexagon__wrap:nth-child(5) {
+                align-self: flex-end;
+            }
             
         }
     }

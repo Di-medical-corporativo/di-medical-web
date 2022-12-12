@@ -35,12 +35,23 @@
         <div class="specialty__hexagon">
           <img
             data-aos="zoom-in"
-            src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Fspecialty%2Fjeringa.png?alt=media&token=452fe8e1-640a-4a42-8656-e2580c830b5f"
+            src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Fspecialty%2Fmascarilla.png?alt=media&token=08324c59-10e1-40b9-aefe-c2f0264191a5"
             alt="Jeringa logo"
             srcset=""
           />
         </div>
         <h3 class="specialty__title"><strong>Anestesia</strong></h3>
+      </div>
+      <div class="specialty">
+        <div class="specialty__hexagon">
+          <img
+            data-aos="zoom-in"
+            src="https://firebasestorage.googleapis.com/v0/b/di-medical-del-sur.appspot.com/o/static%2Fspecialty%2Fjeringa.png?alt=media&token=452fe8e1-640a-4a42-8656-e2580c830b5f"
+            alt="Jeringa logo"
+            srcset=""
+          />
+        </div>
+        <h3 class="specialty__title"><strong>Terapia de infusión</strong></h3>
       </div>
     </div>
   </div>
